@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "source_workbook": "data/raw/supp_char/extracted/PMC7606464__41467_2020_19344_MOESM5_ESM.xlsx",
+  "source_workbook_sha256": "124b1aa0b8dff8b9db26b87205207aa4a256143e91b658b7b8884ca6da5c3079",
+  "workbook_nonempty_data_rows": 79,
+  "rows_with_abbreviation": 79,
+  "rows_with_protein_sequence": 79,
+  "nonempty_rows_without_protein_sequence": 0,
+  "catalog_rows": 79,
+  "gold_master_exact_sequence_matches": 79,
+  "output": "benchmarks/multi_evidence_v2/gasiunas_experimental_catalog.tsv"
+}

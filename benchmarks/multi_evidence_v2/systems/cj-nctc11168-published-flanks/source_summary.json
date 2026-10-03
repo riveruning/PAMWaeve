@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "cj-nctc11168-published-flanks",
+    "assembly_accession": "GCF_000009085.1",
+    "chromosome_accession": "AL111168.1",
+    "protein_record_id": "YP_002344900.1",
+    "host_taxon": "Campylobacter jejuni subsp. jejuni",
+    "host_strain": "NCTC 11168",
+    "crispr_type": "Type II-C",
+    "expected_spacer_rows": 4,
+    "expected_hit_rows": 2
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/raw/external_datasets/ncbi_cas9_candidate_genomes/ncbi_dataset/data/GCF_000009085.1/protein.faa",
+    "protein_source_kind": "NCBI assembly protein",
+    "source_subtype_filter": null,
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 4,
+    "published_flank_rows": 2,
+    "no_hit_rows": 2
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 4
+  },
+  "artifacts": {
+    "protein_faa_sha256": "6d5e4937b8707d51ee79d85b3c5562904e370e20d44d2080153945f70c76fb86",
+    "protein_sequence_sha256": "47d46d3653037f9076264916e81192682e1d178885b9c75d6b9af2cd84734369",
+    "spacers_fna_sha256": "72429a8b920e8e7872d9119d90b9aadc69534e060652388c2f9a2cfa1dc597b3",
+    "published_flanks_tsv_sha256": "620a289fab96c509776c3f372549e4c76df32b62cdc4eedf9da7ad555d6afff9"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

@@ -1,0 +1,4290 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-10-03T05:30:21.600522+00:00",
+  "manifest": "benchmarks/multi_evidence_v2/manifest_final22.json",
+  "manifest_sha256": "ab3ea376df2bad64bca44937113b7213c51d0d23e601afbbd862f4538edaf0ec",
+  "manifest_format_version": 2,
+  "manifest_system_count": 22,
+  "strict_independent_systems": 3,
+  "strict_independent_track_counts": {
+    "protein_only": 3
+  },
+  "strict_paired_evidence_systems": 0,
+  "track_counts": {
+    "paired_evidence": 1,
+    "protein_only": 22,
+    "published_flanks": 18
+  },
+  "candidate_policy": "exhaustive concrete A/C/G/T candidates, ranked within PAM length",
+  "fusion_policy": "abstain",
+  "metrics": [
+    "MRR",
+    "Recall@1",
+    "Recall@3",
+    "Recall@5",
+    "coverage"
+  ],
+  "aggregate": {
+    "system_count": 22,
+    "methods": {
+      "family_prior": {
+        "systems_total": 1,
+        "systems_in_manifest": 22,
+        "systems_not_applicable": 0,
+        "systems_with_method": 1,
+        "systems_scored": 1,
+        "system_coverage": 1.0,
+        "mrr_all_systems": 1.0,
+        "mrr_eligible_systems": 1.0,
+        "mrr_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ],
+        "recall_at_1_all_systems": 1.0,
+        "recall_at_1_eligible_systems": 1.0,
+        "recall_at_1_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ],
+        "recall_at_3_all_systems": 1.0,
+        "recall_at_3_eligible_systems": 1.0,
+        "recall_at_3_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ],
+        "recall_at_5_all_systems": 1.0,
+        "recall_at_5_eligible_systems": 1.0,
+        "recall_at_5_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ]
+      },
+      "fusion": {
+        "systems_total": 19,
+        "systems_in_manifest": 22,
+        "systems_not_applicable": 3,
+        "systems_with_method": 19,
+        "systems_scored": 9,
+        "system_coverage": 0.47368421052631576,
+        "mrr_all_systems": 0.4473684210526316,
+        "mrr_eligible_systems": 0.9444444444444444,
+        "mrr_bootstrap_95_ci_eligible": [
+          0.8333333333333334,
+          1.0
+        ],
+        "recall_at_1_all_systems": 0.42105263157894735,
+        "recall_at_1_eligible_systems": 0.8888888888888888,
+        "recall_at_1_bootstrap_95_ci_eligible": [
+          0.6666666666666666,
+          1.0
+        ],
+        "recall_at_3_all_systems": 0.47368421052631576,
+        "recall_at_3_eligible_systems": 1.0,
+        "recall_at_3_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ],
+        "recall_at_5_all_systems": 0.47368421052631576,
+        "recall_at_5_eligible_systems": 1.0,
+        "recall_at_5_bootstrap_95_ci_eligible": [
+          1.0,
+          1.0
+        ]
+      },
+      "protein_only": {
+        "systems_total": 22,
+        "systems_in_manifest": 22,
+        "systems_not_applicable": 0,
+        "systems_with_method": 22,
+        "systems_scored": 22,
+        "system_coverage": 1.0,
+        "mrr_all_systems": 0.682706910575763,
+        "mrr_eligible_systems": 0.682706910575763,
+        "mrr_bootstrap_95_ci_eligible": [
+          0.4957168514545564,
+          0.8564685314685314
+        ],
+        "recall_at_1_all_systems": 0.6363636363636364,
+        "recall_at_1_eligible_systems": 0.6363636363636364,
+        "recall_at_1_bootstrap_95_ci_eligible": [
+          0.4090909090909091,
+          0.8181818181818182
+        ],
+        "recall_at_3_all_systems": 0.6818181818181818,
+        "recall_at_3_eligible_systems": 0.6818181818181818,
+        "recall_at_3_bootstrap_95_ci_eligible": [
+          0.5,
+          0.8636363636363636
+        ],
+        "recall_at_5_all_systems": 0.7272727272727273,
+        "recall_at_5_eligible_systems": 0.7272727272727273,
+        "recall_at_5_bootstrap_95_ci_eligible": [
+          0.5454545454545454,
+          0.9090909090909091
+        ]
+      },
+      "spacer_only": {
+        "systems_total": 19,
+        "systems_in_manifest": 22,
+        "systems_not_applicable": 3,
+        "systems_with_method": 19,
+        "systems_scored": 18,
+        "system_coverage": 0.9473684210526315,
+        "mrr_all_systems": 0.6995646227624847,
+        "mrr_eligible_systems": 0.7384293240270671,
+        "mrr_bootstrap_95_ci_eligible": [
+          0.5717626573604003,
+          0.898148148148148
+        ],
+        "recall_at_1_all_systems": 0.5789473684210527,
+        "recall_at_1_eligible_systems": 0.6111111111111112,
+        "recall_at_1_bootstrap_95_ci_eligible": [
+          0.3888888888888889,
+          0.8333333333333334
+        ],
+        "recall_at_3_all_systems": 0.8421052631578947,
+        "recall_at_3_eligible_systems": 0.8888888888888888,
+        "recall_at_3_bootstrap_95_ci_eligible": [
+          0.7222222222222222,
+          1.0
+        ],
+        "recall_at_5_all_systems": 0.8421052631578947,
+        "recall_at_5_eligible_systems": 0.8888888888888888,
+        "recall_at_5_bootstrap_95_ci_eligible": [
+          0.7222222222222222,
+          1.0
+        ]
+      }
+    },
+    "paired_mrr": {
+      "fusion_minus_protein_only": {
+        "n": 9,
+        "mean_mrr_delta": 0.10826210826210826,
+        "bootstrap_95_ci": [
+          0.0,
+          0.32478632478632474
+        ]
+      },
+      "fusion_minus_spacer_only": {
+        "n": 9,
+        "mean_mrr_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "by_tier": {
+    "engineering_regression": {
+      "system_count": 1,
+      "methods": {
+        "family_prior": {
+          "systems_total": 1,
+          "systems_in_manifest": 1,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "fusion": {
+          "systems_total": 1,
+          "systems_in_manifest": 1,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 1,
+          "systems_in_manifest": 1,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 1,
+          "systems_in_manifest": 1,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 1,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 1,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "retrospective_biological": {
+      "system_count": 18,
+      "methods": {
+        "fusion": {
+          "systems_total": 18,
+          "systems_in_manifest": 18,
+          "systems_not_applicable": 0,
+          "systems_with_method": 18,
+          "systems_scored": 8,
+          "system_coverage": 0.4444444444444444,
+          "mrr_all_systems": 0.4166666666666667,
+          "mrr_eligible_systems": 0.9375,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.8125,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.3888888888888889,
+          "recall_at_1_eligible_systems": 0.875,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.625,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.4444444444444444,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.4444444444444444,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 18,
+          "systems_in_manifest": 18,
+          "systems_not_applicable": 0,
+          "systems_with_method": 18,
+          "systems_scored": 18,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.7727207977207977,
+          "mrr_eligible_systems": 0.7727207977207977,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.5893874643874644,
+            0.9203703703703704
+          ],
+          "recall_at_1_all_systems": 0.7222222222222222,
+          "recall_at_1_eligible_systems": 0.7222222222222222,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.5,
+            0.8888888888888888
+          ],
+          "recall_at_3_all_systems": 0.7777777777777778,
+          "recall_at_3_eligible_systems": 0.7777777777777778,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.5555555555555556,
+            0.9444444444444444
+          ],
+          "recall_at_5_all_systems": 0.8333333333333334,
+          "recall_at_5_eligible_systems": 0.8333333333333334,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.6666666666666666,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 18,
+          "systems_in_manifest": 18,
+          "systems_not_applicable": 0,
+          "systems_with_method": 18,
+          "systems_scored": 17,
+          "system_coverage": 0.9444444444444444,
+          "mrr_all_systems": 0.6828737684715115,
+          "mrr_eligible_systems": 0.723042813675718,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.5465758234298674,
+            0.8823601371553575
+          ],
+          "recall_at_1_all_systems": 0.5555555555555556,
+          "recall_at_1_eligible_systems": 0.5882352941176471,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.35294117647058826,
+            0.8235294117647058
+          ],
+          "recall_at_3_all_systems": 0.8333333333333334,
+          "recall_at_3_eligible_systems": 0.8823529411764706,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.7058823529411765,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.8333333333333334,
+          "recall_at_5_eligible_systems": 0.8823529411764706,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.7058823529411765,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 8,
+          "mean_mrr_delta": 0.12179487179487179,
+          "bootstrap_95_ci": [
+            0.0,
+            0.36538461538461536
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 8,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "strict_independent": {
+      "system_count": 3,
+      "methods": {
+        "protein_only": {
+          "systems_total": 3,
+          "systems_in_manifest": 3,
+          "systems_not_applicable": 0,
+          "systems_with_method": 3,
+          "systems_scored": 3,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.0368592245641426,
+          "mrr_eligible_systems": 0.0368592245641426,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.00819672131147541,
+            0.06666666666666667
+          ],
+          "recall_at_1_all_systems": 0.0,
+          "recall_at_1_eligible_systems": 0.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_3_all_systems": 0.0,
+          "recall_at_3_eligible_systems": 0.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_5_all_systems": 0.0,
+          "recall_at_5_eligible_systems": 0.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        },
+        "fusion_minus_spacer_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        }
+      }
+    }
+  },
+  "by_evaluation_role": {
+    "development_regression": {
+      "system_count": 4,
+      "methods": {
+        "family_prior": {
+          "systems_total": 1,
+          "systems_in_manifest": 4,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "fusion": {
+          "systems_total": 4,
+          "systems_in_manifest": 4,
+          "systems_not_applicable": 0,
+          "systems_with_method": 4,
+          "systems_scored": 2,
+          "system_coverage": 0.5,
+          "mrr_all_systems": 0.5,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.5,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.5,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.5,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 4,
+          "systems_in_manifest": 4,
+          "systems_not_applicable": 0,
+          "systems_with_method": 4,
+          "systems_scored": 4,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.5333333333333334,
+          "mrr_eligible_systems": 0.5333333333333334,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.06666666666666667,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.5,
+          "recall_at_1_eligible_systems": 0.5,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.5,
+          "recall_at_3_eligible_systems": 0.5,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.5,
+          "recall_at_5_eligible_systems": 0.5,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 4,
+          "systems_in_manifest": 4,
+          "systems_not_applicable": 0,
+          "systems_with_method": 4,
+          "systems_scored": 3,
+          "system_coverage": 0.75,
+          "mrr_all_systems": 0.5833333333333334,
+          "mrr_eligible_systems": 0.7777777777777778,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.3333333333333333,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.5,
+          "recall_at_1_eligible_systems": 0.6666666666666666,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.75,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.75,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 2,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 2,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "retrospective_expansion_2026_09_24": {
+      "system_count": 6,
+      "methods": {
+        "fusion": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 4,
+          "system_coverage": 0.6666666666666666,
+          "mrr_all_systems": 0.5833333333333334,
+          "mrr_eligible_systems": 0.875,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.625,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.5,
+          "recall_at_1_eligible_systems": 0.75,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.25,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.6666666666666666,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.6666666666666666,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 6,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.7542735042735043,
+          "mrr_eligible_systems": 0.7542735042735043,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.4252136752136752,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.6666666666666666,
+          "recall_at_1_eligible_systems": 0.6666666666666666,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.16666666666666666,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.8333333333333334,
+          "recall_at_3_eligible_systems": 0.8333333333333334,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.5,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.8333333333333334,
+          "recall_at_5_eligible_systems": 0.8333333333333334,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.5,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 6,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.8333333333333334,
+          "mrr_eligible_systems": 0.8333333333333334,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.6666666666666666,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.6666666666666666,
+          "recall_at_1_eligible_systems": 0.6666666666666666,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.3333333333333333,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 4,
+          "mean_mrr_delta": 0.24358974358974358,
+          "bootstrap_95_ci": [
+            0.0,
+            0.7307692307692307
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 4,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "retrospective_expansion_2026_09_25": {
+      "system_count": 6,
+      "methods": {
+        "fusion": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 2,
+          "system_coverage": 0.3333333333333333,
+          "mrr_all_systems": 0.3333333333333333,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.3333333333333333,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.3333333333333333,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.3333333333333333,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 6,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 1.0,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 1.0,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 6,
+          "systems_in_manifest": 6,
+          "systems_not_applicable": 0,
+          "systems_with_method": 6,
+          "systems_scored": 6,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.5763990831923121,
+          "mrr_eligible_systems": 0.5763990831923121,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.24308613846582525,
+            0.8888888888888888
+          ],
+          "recall_at_1_all_systems": 0.5,
+          "recall_at_1_eligible_systems": 0.5,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.16666666666666666,
+            0.8333333333333334
+          ],
+          "recall_at_3_all_systems": 0.6666666666666666,
+          "recall_at_3_eligible_systems": 0.6666666666666666,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.3333333333333333,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.6666666666666666,
+          "recall_at_5_eligible_systems": 0.6666666666666666,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.3333333333333333,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 2,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 2,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "retrospective_holdout_2026_09_24": {
+      "system_count": 3,
+      "methods": {
+        "fusion": {
+          "systems_total": 3,
+          "systems_in_manifest": 3,
+          "systems_not_applicable": 0,
+          "systems_with_method": 3,
+          "systems_scored": 1,
+          "system_coverage": 0.3333333333333333,
+          "mrr_all_systems": 0.3333333333333333,
+          "mrr_eligible_systems": 1.0,
+          "mrr_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.3333333333333333,
+          "recall_at_1_eligible_systems": 1.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.3333333333333333,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 0.3333333333333333,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "protein_only": {
+          "systems_total": 3,
+          "systems_in_manifest": 3,
+          "systems_not_applicable": 0,
+          "systems_with_method": 3,
+          "systems_scored": 3,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.75,
+          "mrr_eligible_systems": 0.75,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.25,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.6666666666666666,
+          "recall_at_1_eligible_systems": 0.6666666666666666,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 0.6666666666666666,
+          "recall_at_3_eligible_systems": 0.6666666666666666,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        },
+        "spacer_only": {
+          "systems_total": 3,
+          "systems_in_manifest": 3,
+          "systems_not_applicable": 0,
+          "systems_with_method": 3,
+          "systems_scored": 3,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.8333333333333334,
+          "mrr_eligible_systems": 0.8333333333333334,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.5,
+            1.0
+          ],
+          "recall_at_1_all_systems": 0.6666666666666666,
+          "recall_at_1_eligible_systems": 0.6666666666666666,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            1.0
+          ],
+          "recall_at_3_all_systems": 1.0,
+          "recall_at_3_eligible_systems": 1.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ],
+          "recall_at_5_all_systems": 1.0,
+          "recall_at_5_eligible_systems": 1.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 1,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "fusion_minus_spacer_only": {
+          "n": 1,
+          "mean_mrr_delta": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "strict_protein_only_expansion_2026_09_25": {
+      "system_count": 1,
+      "methods": {
+        "protein_only": {
+          "systems_total": 1,
+          "systems_in_manifest": 1,
+          "systems_not_applicable": 0,
+          "systems_with_method": 1,
+          "systems_scored": 1,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.03571428571428571,
+          "mrr_eligible_systems": 0.03571428571428571,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.03571428571428571,
+            0.03571428571428571
+          ],
+          "recall_at_1_all_systems": 0.0,
+          "recall_at_1_eligible_systems": 0.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_3_all_systems": 0.0,
+          "recall_at_3_eligible_systems": 0.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_5_all_systems": 0.0,
+          "recall_at_5_eligible_systems": 0.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        },
+        "fusion_minus_spacer_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        }
+      }
+    },
+    "strict_protein_only_expansion_2026_09_26": {
+      "system_count": 2,
+      "methods": {
+        "protein_only": {
+          "systems_total": 2,
+          "systems_in_manifest": 2,
+          "systems_not_applicable": 0,
+          "systems_with_method": 2,
+          "systems_scored": 2,
+          "system_coverage": 1.0,
+          "mrr_all_systems": 0.037431693989071035,
+          "mrr_eligible_systems": 0.037431693989071035,
+          "mrr_bootstrap_95_ci_eligible": [
+            0.00819672131147541,
+            0.06666666666666667
+          ],
+          "recall_at_1_all_systems": 0.0,
+          "recall_at_1_eligible_systems": 0.0,
+          "recall_at_1_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_3_all_systems": 0.0,
+          "recall_at_3_eligible_systems": 0.0,
+          "recall_at_3_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_at_5_all_systems": 0.0,
+          "recall_at_5_eligible_systems": 0.0,
+          "recall_at_5_bootstrap_95_ci_eligible": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paired_mrr": {
+        "fusion_minus_protein_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        },
+        "fusion_minus_spacer_only": {
+          "n": 0,
+          "mean_mrr_delta": null,
+          "bootstrap_95_ci": null
+        }
+      }
+    }
+  },
+  "systems": [
+    {
+      "system_id": "spcas9-pampredict-example",
+      "tier": "engineering_regression",
+      "evaluation_role": "development_regression",
+      "available_tracks": [
+        "paired_evidence",
+        "protein_only"
+      ],
+      "spacer_evidence_track": "paired_evidence",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "3": [
+          "NGG"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 64,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 37,
+        "orientation_pass": true,
+        "by_length": {
+          "3": {
+            "counts": {
+              "input_spacers": 37,
+              "unique_spacers": 37,
+              "mapped_unique_spacers": 37,
+              "target_records": 67,
+              "alignments": 105
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "3": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "family_prior": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AGG",
+                "CGG",
+                "GGG",
+                "TGG"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/spcas9-pampredict-example/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/spcas9-pampredict-example/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/spcas9-pampredict-example/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sp7f7-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "development_regression",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "3": [
+          "NGG"
+        ]
+      },
+      "protein_training_exposure": "near",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 64,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": false,
+        "nearest_train_identity": "0.99415205"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 7,
+        "orientation_pass": true,
+        "by_length": {
+          "3": {
+            "counts": {
+              "input_spacers": 8,
+              "unique_spacers": 8,
+              "effective_spacers_for_pam_side": 7,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 7,
+              "published_flank_records": 7,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "3": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "CGG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "CGG"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sp7f7-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sp7f7-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sp7f7-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "nme-m22809-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "development_regression",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "8": [
+          "NNNNGATT"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 65536,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 11,
+        "orientation_pass": true,
+        "by_length": {
+          "8": {
+            "counts": {
+              "input_spacers": 25,
+              "unique_spacers": 25,
+              "effective_spacers_for_pam_side": 11,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 11,
+              "published_flank_records": 11,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "8": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "8"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.06666666666666667,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNGATT"
+              ],
+              "scored_candidates": 65536,
+              "best_gold_rank": 15,
+              "best_gold_rank_optimistic": 15,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.06666666666666667,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "AAATGATA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.3333333333333333,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNGATT"
+              ],
+              "scored_candidates": 65536,
+              "best_gold_rank": 3,
+              "best_gold_rank_optimistic": 3,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.3333333333333333,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "ATCCGGGT"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNGATT"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['8'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/nme-m22809-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/nme-m22809-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/nme-m22809-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "cj-nctc11168-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "development_regression",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "8": [
+          "NNNNRYAC"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 65536,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 2,
+        "orientation_pass": true,
+        "by_length": {
+          "8": {
+            "counts": {
+              "input_spacers": 4,
+              "unique_spacers": 4,
+              "effective_spacers_for_pam_side": 2,
+              "evidence_eligible": false,
+              "mapped_unique_spacers": 2,
+              "published_flank_records": 2,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "8": [
+            "abstain_missing_scored_source"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.06666666666666667,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNRYAC"
+              ],
+              "scored_candidates": 65536,
+              "best_gold_rank": 15,
+              "best_gold_rank_optimistic": 15,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.06666666666666667,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "AAAAATAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNRYAC"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "8": {
+              "gold_pams": [
+                "NNNNRYAC"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/cj-nctc11168-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/cj-nctc11168-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/cj-nctc11168-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "tde-atcc35405-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "6": [
+          "NAAAAY"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 4096,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 31,
+        "orientation_pass": true,
+        "by_length": {
+          "6": {
+            "counts": {
+              "input_spacers": 53,
+              "unique_spacers": 53,
+              "effective_spacers_for_pam_side": 31,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 31,
+              "published_flank_records": 31,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "6": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "6"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.25,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NAAAAY"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 4,
+              "best_gold_rank_optimistic": 4,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.25,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": true,
+              "top_candidates": [
+                "GAAAAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.5,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NAAAAY"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 2,
+              "best_gold_rank_optimistic": 2,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.5,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "CATACC"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NAAAAY"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['6'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/tde-atcc35405-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/tde-atcc35405-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/tde-atcc35405-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sgo-challis-ch1-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "6": [
+          "NNAAAG"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 4096,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 25,
+        "orientation_pass": true,
+        "by_length": {
+          "6": {
+            "counts": {
+              "input_spacers": 26,
+              "unique_spacers": 26,
+              "effective_spacers_for_pam_side": 25,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 25,
+              "published_flank_records": 25,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "6": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NNAAAG"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAAAAG"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NNAAAG"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "ACAAAG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NNAAAG"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "ACAAAG"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sgo-challis-ch1-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sgo-challis-ch1-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sgo-challis-ch1-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sth1a-lmg18311-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NHGYRAA"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 23,
+        "orientation_pass": true,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 33,
+              "unique_spacers": 33,
+              "effective_spacers_for_pam_side": 23,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 23,
+              "published_flank_records": 23,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "7"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHGYRAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "GAGTAAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHGYRAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TCGCAAA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHGYRAA"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['7'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sth1a-lmg18311-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sth1a-lmg18311-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sth1a-lmg18311-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "ain-ryc-mr95-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "5": [
+          "NRTAW"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 1024,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 27,
+        "orientation_pass": true,
+        "by_length": {
+          "5": {
+            "counts": {
+              "input_spacers": 52,
+              "unique_spacers": 52,
+              "effective_spacers_for_pam_side": 27,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 27,
+              "published_flank_records": 27,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "5": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "5"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NRTAW"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "GATAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.5,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NRTAW"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 2,
+              "best_gold_rank_optimistic": 2,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.5,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGTAG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NRTAW"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['5'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/ain-ryc-mr95-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/ain-ryc-mr95-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/ain-ryc-mr95-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "ssa-jim8777-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NNAGAAA"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 25,
+        "orientation_pass": true,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 25,
+              "unique_spacers": 25,
+              "effective_spacers_for_pam_side": 25,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 25,
+              "published_flank_records": 25,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.02564102564102564,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAGAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 39,
+              "best_gold_rank_optimistic": 39,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.02564102564102564,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "AAAAAAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAGAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAAGAAA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAGAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAAGAAA"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/ssa-jim8777-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/ssa-jim8777-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/ssa-jim8777-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sga-atcc43143-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "5": [
+          "NGGDH"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 1024,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 23,
+        "orientation_pass": true,
+        "by_length": {
+          "5": {
+            "counts": {
+              "input_spacers": 37,
+              "unique_spacers": 37,
+              "effective_spacers_for_pam_side": 23,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 23,
+              "published_flank_records": 23,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "5": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDH"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTT"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDH"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTT"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDH"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTT"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sga-atcc43143-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sga-atcc43143-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sga-atcc43143-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "smu-gs5-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "5": [
+          "NGGDT"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 1024,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 18,
+        "orientation_pass": true,
+        "by_length": {
+          "5": {
+            "counts": {
+              "input_spacers": 21,
+              "unique_spacers": 21,
+              "effective_spacers_for_pam_side": 18,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 18,
+              "published_flank_records": 18,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "5": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.5,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDT"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 2,
+              "best_gold_rank_optimistic": 2,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.5,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.5,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDT"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 2,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 1,
+              "reciprocal_rank": 0.5,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "CGGTT",
+                "TGGTC"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.5,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDT"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 2,
+              "best_gold_rank_optimistic": 2,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.5,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTC"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/smu-gs5-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/smu-gs5-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/smu-gs5-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sdy-ac2713-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "5": [
+          "NGGNG"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 1024,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 18,
+        "orientation_pass": true,
+        "by_length": {
+          "5": {
+            "counts": {
+              "input_spacers": 19,
+              "unique_spacers": 19,
+              "effective_spacers_for_pam_side": 18,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 18,
+              "published_flank_records": 18,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "5": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "5"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGNG"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTG"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGNG"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "CGGGG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGNG"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['5'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sdy-ac2713-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sdy-ac2713-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sdy-ac2713-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "sag2-nem316-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "5": [
+          "NGGDW"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 1024,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 9,
+        "orientation_pass": true,
+        "by_length": {
+          "5": {
+            "counts": {
+              "input_spacers": 12,
+              "unique_spacers": 12,
+              "effective_spacers_for_pam_side": 9,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 9,
+              "published_flank_records": 9,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "5": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDW"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDW"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "5": {
+              "gold_pams": [
+                "NGGDW"
+              ],
+              "scored_candidates": 1024,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGGTA"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/sag2-nem316-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/sag2-nem316-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/sag2-nem316-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "ece-nctc12421-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NNGHAAA"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 33,
+        "orientation_pass": true,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 50,
+              "unique_spacers": 50,
+              "effective_spacers_for_pam_side": 33,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 33,
+              "published_flank_records": 33,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNGHAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAGAAAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNGHAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAGTAAA",
+                "TAGAAAA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNGHAAA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TAGAAAA"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/ece-nctc12421-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/ece-nctc12421-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/ece-nctc12421-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "tsp-h121-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NNAAACN"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 14,
+        "orientation_pass": true,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 19,
+              "unique_spacers": 19,
+              "effective_spacers_for_pam_side": 14,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 14,
+              "published_flank_records": 14,
+              "incomplete_required_flank_records": 1,
+              "excluded_incomplete_source_row_ids": [
+                "180609"
+              ],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "7"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAAACN"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAAAACA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.3333333333333333,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAAACN"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 3,
+              "best_gold_rank_optimistic": 3,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.3333333333333333,
+              "recall_at_1": false,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "GGGTCAA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNAAACN"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['7'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/tsp-h121-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/tsp-h121-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/tsp-h121-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "nme2-de10444-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NHDTCCA"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 14,
+        "orientation_pass": false,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 20,
+              "unique_spacers": 20,
+              "effective_spacers_for_pam_side": 14,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 14,
+              "published_flank_records": 14,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "upstream",
+            "orientation_warning": true
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "7"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHDTCCA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAATCCA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 6.116582053948254e-05,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHDTCCA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 16349,
+              "best_gold_rank_optimistic": 15,
+              "non_gold_candidates_tied_with_best_gold": 16334,
+              "reciprocal_rank": 6.116582053948254e-05,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "GAGAACA"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NHDTCCA"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "spacer-side orientation signal requires review",
+        "fusion abstained for PAM lengths ['7'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/nme2-de10444-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/nme2-de10444-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/nme2-de10444-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "seq2-nctc11606-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "3": [
+          "NGG"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 64,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 14,
+        "orientation_pass": true,
+        "by_length": {
+          "3": {
+            "counts": {
+              "input_spacers": 16,
+              "unique_spacers": 16,
+              "effective_spacers_for_pam_side": 14,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 14,
+              "published_flank_records": 14,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "3": [
+            "joint_ranking_top_agreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "3": {
+              "gold_pams": [
+                "NGG"
+              ],
+              "scored_candidates": 64,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGG"
+              ]
+            }
+          }
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/seq2-nctc11606-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/seq2-nctc11606-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/seq2-nctc11606-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "psp-ct06-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "6": [
+          "NRTTTT"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 4096,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 12,
+        "orientation_pass": true,
+        "by_length": {
+          "6": {
+            "counts": {
+              "input_spacers": 13,
+              "unique_spacers": 13,
+              "effective_spacers_for_pam_side": 12,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 12,
+              "published_flank_records": 12,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "6": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "6"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NRTTTT"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "GATTTT"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NRTTTT"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "TGTTTT"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NRTTTT"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['6'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/psp-ct06-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/psp-ct06-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/psp-ct06-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "wvi-dsm16922-published-flanks",
+      "tier": "retrospective_biological",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "spacer_evidence_track": "published_flanks",
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "HHAAATD"
+        ]
+      },
+      "protein_training_exposure": "exact",
+      "strict_independent_eligible": false,
+      "strict_independent_tracks": [],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": true,
+        "nearest_train_identity": "1.0"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": 8,
+        "orientation_pass": true,
+        "by_length": {
+          "7": {
+            "counts": {
+              "input_spacers": 20,
+              "unique_spacers": 20,
+              "effective_spacers_for_pam_side": 8,
+              "evidence_eligible": true,
+              "mapped_unique_spacers": 8,
+              "published_flank_records": 8,
+              "incomplete_required_flank_records": 0,
+              "excluded_incomplete_source_row_ids": [],
+              "raw_target_records": 0,
+              "alignments": 0
+            },
+            "inferred_signal_side": "downstream",
+            "orientation_warning": false
+          }
+        }
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": [
+            "abstain_severe_top_disagreement"
+          ]
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": [
+          "7"
+        ]
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "HHAAATD"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 1,
+              "best_gold_rank_optimistic": 1,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 1.0,
+              "recall_at_1": true,
+              "recall_at_3": true,
+              "recall_at_5": true,
+              "top_candidates": [
+                "AAAAATA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.125,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "HHAAATD"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 8,
+              "best_gold_rank_optimistic": 7,
+              "non_gold_candidates_tied_with_best_gold": 1,
+              "reciprocal_rank": 0.125,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "TATCCTC"
+              ]
+            }
+          }
+        },
+        "fusion": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 0,
+          "abstained_lengths": 1,
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "HHAAATD"
+              ],
+              "scored_candidates": 0,
+              "best_gold_rank": null,
+              "best_gold_rank_optimistic": null,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.0,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": []
+            }
+          }
+        }
+      },
+      "warnings": [
+        "fusion abstained for PAM lengths ['7'] because source tops disagreed"
+      ],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/wvi-dsm16922-published-flanks/protein_scores.tsv",
+        "spacer_scores": "data/parsed/bench_final22/wvi-dsm16922-published-flanks/spacer_scores.tsv",
+        "fusion_scores": "data/parsed/bench_final22/wvi-dsm16922-published-flanks/fusion_scores.tsv"
+      }
+    },
+    {
+      "system_id": "cj4-campylobacter-jejuni-414-protein-only",
+      "tier": "strict_independent",
+      "evaluation_role": "strict_protein_only_expansion_2026_09_25",
+      "available_tracks": [
+        "protein_only"
+      ],
+      "spacer_evidence_track": null,
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "6": [
+          "NNNGRY"
+        ]
+      },
+      "protein_training_exposure": "none",
+      "strict_independent_eligible": true,
+      "strict_independent_tracks": [
+        "protein_only"
+      ],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 4096,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": false,
+        "nearest_train_identity": "0.89441624"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": null,
+        "orientation_pass": null,
+        "by_length": {}
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "6": []
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.03571428571428571,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "6": {
+              "gold_pams": [
+                "NNNGRY"
+              ],
+              "scored_candidates": 4096,
+              "best_gold_rank": 28,
+              "best_gold_rank_optimistic": 28,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.03571428571428571,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "AAAAAT"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        },
+        "fusion": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track, so there is nothing to fuse",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/cj4-campylobacter-jejuni-414-protein-only/protein_scores.tsv",
+        "spacer_scores": null,
+        "fusion_scores": null
+      }
+    },
+    {
+      "system_id": "asp-acidiphilium-21-60-14-protein-only",
+      "tier": "strict_independent",
+      "evaluation_role": "strict_protein_only_expansion_2026_09_26",
+      "available_tracks": [
+        "protein_only"
+      ],
+      "spacer_evidence_track": null,
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NNNNGCA"
+        ]
+      },
+      "protein_training_exposure": "none",
+      "strict_independent_eligible": true,
+      "strict_independent_tracks": [
+        "protein_only"
+      ],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": false,
+        "nearest_train_identity": "0.63932806"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": null,
+        "orientation_pass": null,
+        "by_length": {}
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": []
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.00819672131147541,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NNNNGCA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 122,
+              "best_gold_rank_optimistic": 122,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.00819672131147541,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "GGCGGAA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        },
+        "fusion": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track, so there is nothing to fuse",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/asp-acidiphilium-21-60-14-protein-only/protein_scores.tsv",
+        "spacer_scores": null,
+        "fusion_scores": null
+      }
+    },
+    {
+      "system_id": "cba-caulobacterales-protein-only",
+      "tier": "strict_independent",
+      "evaluation_role": "strict_protein_only_expansion_2026_09_26",
+      "available_tracks": [
+        "protein_only"
+      ],
+      "spacer_evidence_track": null,
+      "cas_family": "Cas9",
+      "gold_pam_spectrum": {
+        "7": [
+          "NGWNCCA"
+        ]
+      },
+      "protein_training_exposure": "none",
+      "strict_independent_eligible": true,
+      "strict_independent_tracks": [
+        "protein_only"
+      ],
+      "candidate_definition": "exhaustive concrete A/C/G/T strings per gold PAM length",
+      "candidate_count": 16384,
+      "protein_diagnostics": {
+        "runtime_training_exact_match": false,
+        "nearest_train_identity": "0.75885167"
+      },
+      "spacer_diagnostics": {
+        "mapped_unique_spacers": null,
+        "orientation_pass": null,
+        "by_length": {}
+      },
+      "fusion_diagnostics": {
+        "policy": "abstain",
+        "gate_by_length": {
+          "7": []
+        },
+        "fallback_lengths": [],
+        "abstain_conflict_lengths": []
+      },
+      "methods": {
+        "protein_only": {
+          "n_gold_lengths": 1,
+          "scored_lengths": 1,
+          "abstained_lengths": 0,
+          "coverage": 1.0,
+          "mrr": 0.06666666666666667,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "by_length": {
+            "7": {
+              "gold_pams": [
+                "NGWNCCA"
+              ],
+              "scored_candidates": 16384,
+              "best_gold_rank": 15,
+              "best_gold_rank_optimistic": 15,
+              "non_gold_candidates_tied_with_best_gold": 0,
+              "reciprocal_rank": 0.06666666666666667,
+              "recall_at_1": false,
+              "recall_at_3": false,
+              "recall_at_5": false,
+              "top_candidates": [
+                "CCCGCCA"
+              ]
+            }
+          }
+        },
+        "spacer_only": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        },
+        "fusion": {
+          "not_applicable": true,
+          "not_applicable_reason": "system provides no spacer evidence track, so there is nothing to fuse",
+          "n_gold_lengths": 0,
+          "scored_lengths": 0,
+          "abstained_lengths": 0,
+          "coverage": 0.0,
+          "mrr": null,
+          "recall_at_1": null,
+          "recall_at_3": null,
+          "recall_at_5": null,
+          "by_length": {}
+        }
+      },
+      "warnings": [],
+      "artifacts": {
+        "protein_scores": "data/parsed/bench_final22/cba-caulobacterales-protein-only/protein_scores.tsv",
+        "spacer_scores": null,
+        "fusion_scores": null
+      }
+    }
+  ],
+  "decision": "FRAMEWORK_VALIDATED_NO_STRICT_COHORT",
+  "reporting_guard": "Do not claim model generalization without a strict independent cohort."
+}

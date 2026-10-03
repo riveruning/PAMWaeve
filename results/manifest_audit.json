@@ -1,0 +1,392 @@
+[
+  {
+    "system_id": "spcas9-pampredict-example",
+    "format_version": 2,
+    "available_tracks": [
+      "paired_evidence",
+      "protein_only"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "target records are not verified independent virus clusters"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sp7f7-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "nme-m22809-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "cj-nctc11168-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "tde-atcc35405-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sgo-challis-ch1-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sth1a-lmg18311-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "ain-ryc-mr95-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "ssa-jim8777-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sga-atcc43143-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "smu-gs5-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sdy-ac2713-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "sag2-nem316-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "ece-nctc12421-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "tsp-h121-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "nme2-de10444-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "seq2-nctc11606-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "psp-ct06-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "wvi-dsm16922-published-flanks",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only",
+      "published_flanks"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": false,
+    "strict_independent_eligible_tracks": [],
+    "errors": [],
+    "warnings": [
+      "protein is exposed to Protein2PAM training distribution",
+      "published flanks are aggregate per-spacer evidence without raw target identifiers"
+    ],
+    "runner_supported": true
+  },
+  {
+    "system_id": "cj4-campylobacter-jejuni-414-protein-only",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": true,
+    "strict_independent_eligible_tracks": [
+      "protein_only"
+    ],
+    "errors": [],
+    "warnings": [],
+    "runner_supported": true
+  },
+  {
+    "system_id": "asp-acidiphilium-21-60-14-protein-only",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": true,
+    "strict_independent_eligible_tracks": [
+      "protein_only"
+    ],
+    "errors": [],
+    "warnings": [],
+    "runner_supported": true
+  },
+  {
+    "system_id": "cba-caulobacterales-protein-only",
+    "format_version": 2,
+    "available_tracks": [
+      "protein_only"
+    ],
+    "valid": true,
+    "runnable": true,
+    "strict_independent_eligible": true,
+    "strict_independent_eligible_tracks": [
+      "protein_only"
+    ],
+    "errors": [],
+    "warnings": [],
+    "runner_supported": true
+  }
+]

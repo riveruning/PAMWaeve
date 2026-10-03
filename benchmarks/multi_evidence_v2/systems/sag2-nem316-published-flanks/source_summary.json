@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sag2-nem316-published-flanks",
+    "chromosome_accession": "AL732656.1",
+    "protein_record_id": "Sag2",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus agalactiae",
+    "host_strain": "NEM316",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 12,
+    "expected_hit_rows": 9
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 12,
+    "published_flank_rows": 9,
+    "no_hit_rows": 3
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 12
+  },
+  "artifacts": {
+    "protein_faa_sha256": "21cef7b286093579531d1116eb779eaff92498363228c45f8bcf800937224b94",
+    "protein_sequence_sha256": "7b669277d9fb5380d4602fc7df95a677e1b00c01c5cd89ac5ee2c990d5624b1e",
+    "spacers_fna_sha256": "3fc600f1421858abb952a0eae17251e30680ffc82915f50d512c0bb7c20001f1",
+    "published_flanks_tsv_sha256": "7e80bc595b195aa9df203befc940fabc6a7b0eedf8f81e3378d4a4d206fb8dd4"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

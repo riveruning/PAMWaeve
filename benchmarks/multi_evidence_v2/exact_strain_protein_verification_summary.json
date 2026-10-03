@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "candidates": 4,
+  "verified_exact_strain_and_protein": 4,
+  "verified_accessions": [
+    "AE017226.1",
+    "CP003058.1",
+    "CP000725.1",
+    "FR873482.1"
+  ],
+  "out": "benchmarks/multi_evidence_v2/exact_strain_protein_verification.tsv"
+}

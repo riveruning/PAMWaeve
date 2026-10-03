@@ -1,0 +1,17 @@
+{
+  "format_version": 1,
+  "paper_doi": "10.1073/pnas.2417674122",
+  "evidence_scope": "Four Cas9s with empirical 7N PAM-library profiles in Figure 4D; workbook predicted PAMs are retained only as non-gold provenance.",
+  "identity_definition": "1 - global_levenshtein_distance / max(sequence_lengths)",
+  "identity_threshold": 0.9,
+  "candidate_cosine": 0.3,
+  "max_candidates": 512,
+  "official_cas9_rows": 15843,
+  "candidate_count": 4,
+  "status_counts": {
+    "EXPOSED_NEAR90": 2,
+    "EXPOSED_EXACT": 2
+  },
+  "strict_candidate_ids": [],
+  "output_tsv": "benchmarks/multi_evidence_v2/recent_experimental_cas9_audit.tsv"
+}

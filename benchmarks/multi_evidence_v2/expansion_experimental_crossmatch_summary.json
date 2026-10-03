@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "priority_accessions": 111,
+  "experimental_rows_with_protein": 79,
+  "species_pair_rows": 71,
+  "match_class_counts": {
+    "different_strain": 22,
+    "exact_strain_text_match_candidate": 4,
+    "species_only_match_needs_strain": 45
+  },
+  "exact_strain_text_accessions": [
+    "AE017226.1",
+    "CP000725.1",
+    "CP003058.1",
+    "FR873482.1"
+  ],
+  "registration_rule": "No row is registration-ready until its accession-encoded Cas9 translation exactly matches the experimental protein SHA256.",
+  "output": "benchmarks/multi_evidence_v2/expansion_experimental_crossmatch.tsv"
+}

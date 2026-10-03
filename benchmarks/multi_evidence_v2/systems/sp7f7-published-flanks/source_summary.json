@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sp7f7-published-flanks",
+    "assembly_accession": "GCF_000767505.1",
+    "chromosome_accession": "CP007240.1",
+    "protein_record_id": "WP_038431314.1",
+    "host_taxon": "Streptococcus pyogenes",
+    "host_strain": "7F7",
+    "crispr_type": "Type II-A",
+    "expected_spacer_rows": 8,
+    "expected_hit_rows": 7
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/raw/external_datasets/ncbi_cas9_candidate_genomes/ncbi_dataset/data/GCF_000767505.1/protein.faa",
+    "protein_source_kind": "NCBI assembly protein",
+    "source_subtype_filter": null,
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 8,
+    "published_flank_rows": 7,
+    "no_hit_rows": 1
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 8
+  },
+  "artifacts": {
+    "protein_faa_sha256": "bce05ccfecca4bbbc3065884eb6948236a4f156a3e575f1a8e200ff6c70a347f",
+    "protein_sequence_sha256": "a0d235d74c44a0c7f9e6b81d5dfa984c2b32770ccebb8931af83b2cc62eddb16",
+    "spacers_fna_sha256": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329",
+    "published_flanks_tsv_sha256": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

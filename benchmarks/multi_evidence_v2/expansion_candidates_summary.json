@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "purpose": "source-discovery ledger; not an experimental gold benchmark",
+  "minimum_effective_spacers": 5,
+  "qualified_accession_subtype_cohorts": 644,
+  "registered_cohorts": 17,
+  "unregistered_cohorts": 627,
+  "unregistered_by_curation_priority": {
+    "A": 106,
+    "B": 208,
+    "C": 313
+  },
+  "strict_independent_ready": 0,
+  "priority_A_ledger": "benchmarks/multi_evidence_v2/expansion_priority_A.tsv",
+  "required_next_fields": [
+    "exact same-strain Cas9 protein",
+    "experimental PAM spectrum",
+    "protein-training exposure audit",
+    "raw target identifiers or explicit aggregate-evidence limitation"
+  ]
+}

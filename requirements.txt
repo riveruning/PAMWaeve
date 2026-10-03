@@ -1,0 +1,51 @@
+# Pinned dependency list for the PAMPRIDICT analysis pipeline.
+#
+# Verified on the machine and interpreter described in README.md:
+#   Ubuntu 24.04.4 LTS (WSL2), CPython 3.10.20 (conda-forge)
+#
+# Install:
+#   python -m pip install -r requirements.txt
+#
+# The versions below are the ones the submitted results were produced with.
+# They are pinned, not floored: a different torch/transformers pair changes the
+# numerical output of the model and therefore invalidates a re-run comparison.
+
+# --- Core analysis (required) ---------------------------------------------
+# numpy is the only hard dependency of the scoring/benchmark code.
+numpy==1.23.5
+# pandas and matplotlib are used by the audit/plot helpers; the main
+# benchmark and results.csv path runs without them.
+pandas==2.0.3
+matplotlib==3.7.2
+
+# --- Model inference (required for real predictions) ----------------------
+# Protein2PAM cas9_full is a PyTorch checkpoint loaded through transformers.
+torch==2.12.1
+transformers==4.44.2
+tokenizers==0.19.1
+safetensors==0.8.0
+huggingface_hub==0.36.2
+# Supporting transitive pins observed in the verified environment.
+filelock==4.0.3
+fsspec==2026.9.0
+packaging==26.3
+regex==2026.9.10
+requests==2.34.2
+tqdm==4.70.1
+typing_extensions==4.16.0
+pyyaml==6.0.3
+certifi==2026.7.22
+charset_normalizer==3.5.1
+idna==3.20
+urllib3==2.8.0
+
+# --- Optional: genome annotation (NOT needed for results.csv) -------------
+# The end-to-end genome workflow additionally needs CRISPRCasTyper 1.9.0,
+# distributed as its own environment rather than as a pip requirement here.
+# See README.md "Optional: genome annotation".
+# CRISPRCasTyper==1.9.0
+
+# --- Not required ---------------------------------------------------------
+# The optional LLM assistant (pamdict.app / pamdict.agent) is NOT part of the
+# submission and is not needed to regenerate results.csv. It is excluded from
+# this package on purpose; see docs/SUBMISSION.md.

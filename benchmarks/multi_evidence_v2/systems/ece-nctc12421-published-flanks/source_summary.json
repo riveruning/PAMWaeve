@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "ece-nctc12421-published-flanks",
+    "chromosome_accession": "LS483306.1",
+    "protein_record_id": "Ece",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Enterococcus cecorum",
+    "host_strain": "NCTC 12421",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 50,
+    "expected_hit_rows": 33
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 50,
+    "published_flank_rows": 33,
+    "no_hit_rows": 17
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 50
+  },
+  "artifacts": {
+    "protein_faa_sha256": "1ca455ba7c51f98fe74be831aeda8b322fc5ee91f67cf8c12ec3ca9a19d1015b",
+    "protein_sequence_sha256": "afcaed43f644527577f1b5939d5183de1b1aacc4b75d97b60206b3e8d4a283b1",
+    "spacers_fna_sha256": "7147c05d799e464daf12be4ddb7e9027f0e8b72bfee31d589eee9c09f8655120",
+    "published_flanks_tsv_sha256": "515e7f6856d6ac9a25db4f91cb28401196f3fd0f476fc9497e64917996ce2d65"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

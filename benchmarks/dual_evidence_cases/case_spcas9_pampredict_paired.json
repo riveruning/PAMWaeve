@@ -1,0 +1,67 @@
+{
+  "format_version": 1,
+  "case_id": "spcas9-pampredict-paired",
+  "system_id": "spcas9-pampredict-example",
+  "title": "SpCas9 protein + oriented spacers + frozen phage/plasmid target library",
+  "evidence_tier": "engineering_regression",
+  "claim_scope": "positive-control reconstruction; validates the paired-evidence link only",
+  "independent_benchmark_eligible": false,
+  "candidate_pams": ["NGG", "NAG", "NGA", "NRG"],
+  "gold_pam_spectrum": ["NGG"],
+  "pam_side": "downstream",
+  "pam_length": 3,
+  "max_mismatches": 4,
+  "prior_strength": 2.0,
+  "protein": {
+    "fasta": "data/raw/cas9_full.fasta",
+    "record_id": "SpCas9",
+    "model": "cas9_full",
+    "source": "Protein2PAM cas9_full training FASTA",
+    "source_uri": "https://github.com/Profluent-AI/Protein2PAM",
+    "source_version": "git:887026ce058d6a53b04b3c9205990a65d5a92306",
+    "license": "CC-BY-NC-4.0"
+  },
+  "spacers": [
+    "data/raw/external_datasets/PAMpredict/Example/spacers.fna"
+  ],
+  "targets": [
+    "data/raw/external_datasets/PAMpredict/Example/Phages/phages.fna"
+  ],
+  "expected_input_sha256": {
+    "spacers.fna": "7f4c3de1e0d8e827d8ef7a5e78b36a7e88d7574954814e9a289c007e892885a1",
+    "phages.fna": "1bcb43111b49ed675c988a06542c61b4d455c2b977c1b7fd240bb87a0493b37c"
+  },
+  "spacer_orientation": {
+    "decision": "reverse",
+    "evidence": "Independent recomputation on 2026-10-01 (orientation_probe in run_dual_evidence_case.py). With spacers exactly as provided, the conserved 3nt signal sits UPSTREAM: consensus CCA / 2.614 bits versus downstream GTT / 0.810 bits. Reverse-complementing the spacers moves the identical signal DOWNSTREAM: TGG / 2.614 bits versus AAC / 0.810 bits. Per-spacer check: as provided, 25 of 37 spacers carry the upstream CCx motif and 0 of 37 carry a downstream xGG; after reverse-complementing, 26 of 37 carry downstream xGG. The signal is therefore consistent and single-orientation, with no split-spacer ambiguity. Reverse is correct because Cas9 PAMs lie downstream of the protospacer. The upstream PAMpredict bundle does not declare a direction; predict_pam.py infers it at runtime via pam_on_wrong_strand, and the local pipeline records --reverse-spacers.",
+    "not_evidence": "The per-hit target strand of a spacer match (17 forward / 20 reverse) is NOT evidence about array orientation. find_spacer_hits searches both target strands for every spacer and always reports flanks in the spacer's own frame, so a mix of hit strands is expected and carries no orientation information. Orientation is decided only by which side carries the conserved signal.",
+    "cross_check": "All 8 spacers published for S. pyogenes 7F7 match the independent CCTyper re-annotation of CP007240.1 exactly, on the same strand (data/parsed/genome_agent_real_20260928).",
+    "recomputed_by": "scripts/run_dual_evidence_case.py --spacer-only (orientation_probe block)"
+  },
+  "provenance": {
+    "spacers": {
+      "source_name": "PAMpredict example spacers",
+      "source_uri": "https://github.com/Matteo-Ciciani/PAMpredict",
+      "source_version": "git:4ad096ced18cd1cdca1a73f0f85530133f3d8593",
+      "license": "CC-BY-NC-ND-4.0",
+      "redistribution": "NoDerivatives: do not redistribute a modified or repackaged copy; re-fetch from upstream."
+    },
+    "targets": [
+      {
+        "source_name": "PAMpredict example phage contigs (GPD/MGV-derived VirSorter/VirFinder records)",
+        "source_uri": "https://github.com/Matteo-Ciciani/PAMpredict",
+        "source_version": "git:4ad096ced18cd1cdca1a73f0f85530133f3d8593",
+        "license": "CC-BY-NC-ND-4.0",
+        "redistribution": "NoDerivatives: do not redistribute; re-fetch from upstream.",
+        "ecological_note": "64 of 67 contigs are unnamed uvig_/ivig_ records from human gut virome catalogues (GPD/MGV). That is not the ecological niche of Streptococcus pyogenes, so this library is a technical reconstruction rather than an ecological target set."
+      }
+    ]
+  },
+  "limitations": [
+    "The protein is an exact Protein2PAM training exposure; this is a positive control, not generalisation evidence.",
+    "The gold PAM is the canonical SpCas9 NGG, not an assay performed on this exact construct.",
+    "Target contigs are not clustered to the virus level; support_target_count therefore overstates independent evidence.",
+    "Spacer evidence is evolutionary (spacer-protospacer homology), not cleavage activity.",
+    "PAMpredict is CC-BY-NC-ND-4.0, so its inputs must be re-fetched by the user rather than bundled."
+  ]
+}

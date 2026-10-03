@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pam_depletion",
+    "query": "(\"PAM depletion\" OR \"PAM-depletion\" OR \"depletion assay\") AND (CRISPR OR Cas9 OR Cas12) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_screening",
+    "query": "(\"PAM screen\" OR \"PAM screening\" OR \"PAM library\" OR \"high-throughput PAM\") AND (CRISPR OR Cas) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_identification_characterization",
+    "query": "(\"PAM identification\" OR \"PAM characterization\" OR \"PAM characterisation\" OR \"PAM determination\") AND (Cas9 OR Cas12 OR Cpf1 OR Cas13 OR Cascade) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "native_endogenous_pam",
+    "query": "(\"protospacer adjacent motif\" OR \"protospacer-adjacent motif\") AND (determination OR identification OR characterization OR recognition) AND (bacteria OR bacterial OR strain OR endogenous) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "cleavage_interference_assay",
+    "query": "(\"interference assay\" OR \"plasmid clearance\" OR \"plasmid interference\" OR \"cleavage assay\") AND (PAM OR \"protospacer\") AND (CRISPR OR Cas) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_scanr_pamda",
+    "query": "(\"PAM-SCANR\" OR \"PAM-DETECT\" OR \"HT-PAMDA\" OR \"PAMDA\") AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_preference_recognition_specificity",
+    "query": "(\"PAM preference\" OR \"PAM recognition\" OR \"PAM specificity\" OR \"PAM profiling\") AND (CRISPR OR Cas9 OR Cas12 OR Cpf1) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "target_adjacent_motif_tam",
+    "query": "(\"target-adjacent motif\" OR \"target adjacent motif\" OR \"TAM\" OR \"target-adjacent\") AND (CRISPR OR Cas) AND (PAM OR protospacer) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_logo_frequency",
+    "query": "(\"PAM logo\" OR \"sequence logo\" OR \"PAM frequency\" OR \"PAM matrix\" OR \"PAM-seq\" OR \"PAM web\") AND (CRISPR OR Cas) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "type_i_cascade_pam",
+    "query": "(\"Cascade\" OR \"Type I-E\" OR \"Type I-F\" OR \"Type I CRISPR\") AND (PAM OR \"protospacer adjacent motif\") AND (determination OR identification OR characterization) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  },
+  {
+    "id": "pam_determination_endogenous_strain",
+    "query": "(\"PAM\" AND (\"endogenous\" OR \"native\" OR \"in vivo\")) AND (CRISPR OR Cas) AND (bacteria OR bacterial OR \"E. coli\" OR strain) AND (PUB_YEAR:[2015 TO 2026])",
+    "crispr_types": []
+  }
+]

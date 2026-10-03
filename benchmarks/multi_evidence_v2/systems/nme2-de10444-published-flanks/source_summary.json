@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "nme2-de10444-published-flanks",
+    "chromosome_accession": "CP012392.1",
+    "protein_record_id": "Nme2",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Neisseria meningitidis",
+    "host_strain": "DE10444",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 20,
+    "expected_hit_rows": 14
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 20,
+    "published_flank_rows": 14,
+    "no_hit_rows": 6
+  },
+  "orientation_sources": {
+    "orientation_CRISPRCasdb_fallback": 20
+  },
+  "artifacts": {
+    "protein_faa_sha256": "8e702a9cb979247182c77da85608928e48088c030afba75c2295b047c96484b5",
+    "protein_sequence_sha256": "73e5b4626f7c7b280f2f5abc15b510fcf633430f8efdb573fbe34cf3640ce706",
+    "spacers_fna_sha256": "59528daafab0f26ed29b4b69d22ffb2cdb2c6db4f5ac8e606a0ccf31e8e3bb9a",
+    "published_flanks_tsv_sha256": "fda562f46bc895faeeee9658b03d9927187eec02e4e70c6d6b7d6cabfaa9004c"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

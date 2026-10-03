@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sdy-ac2713-published-flanks",
+    "chromosome_accession": "HE858529.1",
+    "protein_record_id": "Sdy",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus dysgalactiae subsp. equisimilis",
+    "host_strain": "AC-2713",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 19,
+    "expected_hit_rows": 18
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 19,
+    "published_flank_rows": 18,
+    "no_hit_rows": 1
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 19
+  },
+  "artifacts": {
+    "protein_faa_sha256": "e28c5b2efc076736abd0d7547e29c9de30750ca6e7e7ea5f25f613b8e615d126",
+    "protein_sequence_sha256": "2b476818e1648b6e158da808692b408c8a8d32f227ebeeb6f0f942f6ffff8f7b",
+    "spacers_fna_sha256": "65673b4b56debb0666b3dd88d47b3554aae094423b033de51cde77d207e43909",
+    "published_flanks_tsv_sha256": "02020cb82b82e93f1b81de24c4aae4eb15fe1622863b355904bb8f2eabcb375b"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

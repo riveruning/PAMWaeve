@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "tsp-h121-published-flanks",
+    "chromosome_accession": "CP013476.1",
+    "protein_record_id": "Tsp",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Turicibacter sp.",
+    "host_strain": "H121",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 19,
+    "expected_hit_rows": 15
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 19,
+    "published_flank_rows": 15,
+    "no_hit_rows": 4
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 19
+  },
+  "artifacts": {
+    "protein_faa_sha256": "dff598e64e715a6d66140a5f594e1b2af7e233d72e28ad2dbb025b07caa3b2a8",
+    "protein_sequence_sha256": "be0f43868660313c56f6d44c2bad777df90f704267a001aa7a9571012819c909",
+    "spacers_fna_sha256": "6ebad8a63361cd53b92dc975186c9e1ad5842be9cd54c816755af1e316aa1a48",
+    "published_flanks_tsv_sha256": "ed6992a39fae8a7dc9d9099bfb8b510c9c65acf33c08a4cdc8cdb29cf82d3b65"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

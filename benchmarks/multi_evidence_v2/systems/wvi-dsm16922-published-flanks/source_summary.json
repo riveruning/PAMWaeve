@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "wvi-dsm16922-published-flanks",
+    "chromosome_accession": "CP002455.1",
+    "protein_record_id": "Wvi",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Weeksella virosa",
+    "host_strain": "DSM 16922",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 20,
+    "expected_hit_rows": 8
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 20,
+    "published_flank_rows": 8,
+    "no_hit_rows": 12
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 20
+  },
+  "artifacts": {
+    "protein_faa_sha256": "bd1a07642471a16292b0700d110e591d0685ef704bb413b59f7106000ec4e94d",
+    "protein_sequence_sha256": "962137bd7591834df80b86e259271fb3f942505ebaaf26c3ec7985fec92d369e",
+    "spacers_fna_sha256": "285cd474ea1c72145be455e7be48d75f9212f2715c68794f2baaca566db818b0",
+    "published_flanks_tsv_sha256": "b971c65e3f9259a3dd38a2a1e54d0344d4e7e662a0e6f9578a80b993d03eba23"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

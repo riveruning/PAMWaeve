@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "seq2-nctc11606-published-flanks",
+    "chromosome_accession": "LS483354.1",
+    "protein_record_id": "Seq2",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus equi subsp. zooepidemicus",
+    "host_strain": "NCTC 11606",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 16,
+    "expected_hit_rows": 14
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 16,
+    "published_flank_rows": 14,
+    "no_hit_rows": 2
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 16
+  },
+  "artifacts": {
+    "protein_faa_sha256": "2dde9797d8a6012bd896e658c97d6b2c6a9b2b31f1ccb85129320ab949ec14d8",
+    "protein_sequence_sha256": "e150df01b4273c8ee83568d4dd9bd89de59e60519a8efa6ff1205509ac2d48b9",
+    "spacers_fna_sha256": "511b895203684ebc9e5ff453bf04f41c51fcb227d18742478eeed51328cdbfb8",
+    "published_flanks_tsv_sha256": "a8e381426c260ac49e40e1393c2d37b1c480496acf08c6bf232d43d84ee15bb9"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

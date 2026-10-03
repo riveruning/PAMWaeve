@@ -1,0 +1,32 @@
+[
+  {
+    "id": "type_i_pam_recent",
+    "query": "(CRISPR AND PAM) AND (\"Type I\" OR Cascade OR Cas8) AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": ["type_i"]
+  },
+  {
+    "id": "type_ii_pam_recent",
+    "query": "(CRISPR AND PAM) AND (\"Type II\" OR Cas9) AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": ["type_ii"]
+  },
+  {
+    "id": "type_v_pam_recent",
+    "query": "(CRISPR AND PAM) AND (\"Type V\" OR Cas12) AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": ["type_v"]
+  },
+  {
+    "id": "type_iii_pam_recent",
+    "query": "(CRISPR AND PAM) AND (\"Type III\" OR Csm OR Cas10) AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": ["type_iii"]
+  },
+  {
+    "id": "type_iv_vi_pam_recent",
+    "query": "(CRISPR AND PAM) AND (\"Type IV\" OR \"Type VI\" OR Cas13 OR Csf) AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": ["type_iv", "type_vi"]
+  },
+  {
+    "id": "assay_pam_depletion_recent",
+    "query": "(\"PAM depletion\" OR \"PAM-depletion\" OR \"PAM screen\" OR \"PAM screening\" OR \"high-throughput PAM\") AND CRISPR AND (PUB_YEAR:[2024 TO 2026])",
+    "crispr_types": []
+  }
+]

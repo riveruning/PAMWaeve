@@ -1,0 +1,1 @@
+"""PAMdict top-level package."""

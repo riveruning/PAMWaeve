@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "psp-ct06-published-flanks",
+    "chromosome_accession": "CP022754.1",
+    "protein_record_id": "Psp",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Parabacteroides sp.",
+    "host_strain": "CT06",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 13,
+    "expected_hit_rows": 12
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 13,
+    "published_flank_rows": 12,
+    "no_hit_rows": 1
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 13
+  },
+  "artifacts": {
+    "protein_faa_sha256": "6415c75e881e3b074d02fbb2e26d0e1e4dbc72c8c15bbfd8cc74bf495ae5ee5a",
+    "protein_sequence_sha256": "c2f7cb5b21e24dc0244c60c7e7daf4a097078b9437ede5dd05ba81b694a2bb2e",
+    "spacers_fna_sha256": "3e0c22e14fbc2ab6dc47ca2883740723634551e8c1851cd08d322ac54afbe734",
+    "published_flanks_tsv_sha256": "4c8c9828f073bcef8064b6dd2f2c79cf29bc50dfb6f5aaa12c414b855f717d71"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

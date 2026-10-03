@@ -1,0 +1,21 @@
+{
+  "_comment": "Presentation subset only. The ranking evaluation always uses the exhaustive concrete A/C/G/T candidate space; see docs/competition/EVALUATION_PROTOCOL.md.",
+  "spcas9-pampredict-example": [
+    "NGG",
+    "NAG",
+    "NGA",
+    "NRG"
+  ],
+  "sp7f7-published-flanks": [
+    "NGG",
+    "NAG",
+    "NGA",
+    "NRG"
+  ],
+  "seq2-nctc11606-published-flanks": [
+    "NGG",
+    "NAG",
+    "NGA",
+    "NRG"
+  ]
+}

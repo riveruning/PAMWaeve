@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "tde-atcc35405-published-flanks",
+    "chromosome_accession": "AE017226.1",
+    "protein_record_id": "Tde",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Treponema denticola",
+    "host_strain": "ATCC 35405",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 53,
+    "expected_hit_rows": 31
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 53,
+    "published_flank_rows": 31,
+    "no_hit_rows": 22
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 53
+  },
+  "artifacts": {
+    "protein_faa_sha256": "ef60e6a317c24b41204e362a206ab438762f46716934521bed87a84bf597de3d",
+    "protein_sequence_sha256": "a16cf6788a6dca8a92d07b7c23ad23cd3ee4fccbba55ff2f939d59c84edd5dcd",
+    "spacers_fna_sha256": "93e369f9897f7aa0c7de46ba45c9d28785c6206bc0ac82258d863ba3a5036f7c",
+    "published_flanks_tsv_sha256": "731539342dc8ec76dbf6620468bc69d926eebcf8c2b4dfea2fc29940bcfa775e"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

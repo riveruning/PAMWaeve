@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "smu-gs5-published-flanks",
+    "chromosome_accession": "CP003686.1",
+    "protein_record_id": "Smu",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus mutans",
+    "host_strain": "GS-5",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 21,
+    "expected_hit_rows": 18
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 21,
+    "published_flank_rows": 18,
+    "no_hit_rows": 3
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 21
+  },
+  "artifacts": {
+    "protein_faa_sha256": "5527e3a3fea27f034ca0f100f6dc93dcd55a25e4d2628b3a0ac768f8348a2293",
+    "protein_sequence_sha256": "015684f1a67bb02c3f759f99ab1822b2ef811b260bff2b93cfb8e43344000626",
+    "spacers_fna_sha256": "5cb5cb20693e00e31b0748329f902c431b7244e67ecadcdbc4b74e112a4b7476",
+    "published_flanks_tsv_sha256": "d94689b2de96ae38d2c008b3a83958d0a6345d997ca422f5bc3783ce82057e96"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

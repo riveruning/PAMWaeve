@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "ssa-jim8777-published-flanks",
+    "chromosome_accession": "FR873482.1",
+    "protein_record_id": "Ssa",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus salivarius",
+    "host_strain": "JIM8777",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 25,
+    "expected_hit_rows": 25
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 25,
+    "published_flank_rows": 25,
+    "no_hit_rows": 0
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 25
+  },
+  "artifacts": {
+    "protein_faa_sha256": "64e47df04268a63e3f4187a81df64ac5f3030c02156fbeec11c678921f77ef3b",
+    "protein_sequence_sha256": "2a24a5d691d595d29b86d0a9cf4af55d22933bcdfd63fb0c13b927eba5fe23ff",
+    "spacers_fna_sha256": "48c1d2236bfbf85fbd67e0a8051c8805a4d6c9b26b25ac62d5955444373367eb",
+    "published_flanks_tsv_sha256": "daf3325cba2386b5bc9713dec856de90328f0e57a8488b34efd6cd305ba41618"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

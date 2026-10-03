@@ -1,0 +1,191 @@
+{
+  "format_version": 1,
+  "contract_name": "dual-evidence case spec for the PAM agent",
+  "owner_task": "task C (真实双证据案例与价值验证)",
+  "consumer_tasks": ["task B (最小可用 PAM agent)", "task A (Windows 原生发行)"],
+  "status": "ready_for_agent_integration",
+  "purpose": "Give the agent a small, verifiable set of dual-evidence cases with unambiguous expected behaviour, so its dual-evidence decisions can be checked against facts rather than inspected by eye.",
+
+  "how_this_maps_onto_the_existing_agent_tools": {
+    "note": "These are the tool names already implemented in src/pamdict/agent/tools.py. This case spec does not add tools; it supplies inputs and expected outcomes for them.",
+    "tool_sequence_for_a_paired_case": [
+      "inspect_inputs",
+      "check_environment",
+      "start_protein_prediction  (protein + spacers + targets; NO candidate list)",
+      "read_task",
+      "read_report"
+    ],
+    "tool_sequence_when_direction_is_unresolved": [
+      "start_protein_prediction  (protein only, or with spacers but direction unconfirmed)",
+      "read_task",
+      "list_confirmation_options",
+      "ask_human                 (only if the user must choose)",
+      "resume_genome_with_choice (system_id and spacer_orientation copied verbatim from list_confirmation_options)"
+    ],
+    "hard_rule": "reverse_spacers may be set true ONLY after the user explicitly confirms. The agent must never infer or guess spacer direction."
+  },
+
+  "structured_case_records": [
+    {
+      "case_id": "spcas9-pampredict-paired",
+      "case_file": "benchmarks/dual_evidence_cases/case_spcas9_pampredict_paired.json",
+      "evidence_class": "raw_spacer_target_pairs",
+      "available_inputs": {
+        "protein": "data/raw/cas9_full.fasta (record SpCas9)",
+        "spacers": "data/raw/external_datasets/PAMpredict/Example/spacers.fna",
+        "targets": ["data/raw/external_datasets/PAMpredict/Example/Phages/phages.fna"]
+      },
+      "input_sha256": {
+        "spacers.fna": "7f4c3de1e0d8e827d8ef7a5e78b36a7e88d7574954814e9a289c007e892885a1",
+        "phages.fna": "1bcb43111b49ed675c988a06542c61b4d455c2b977c1b7fd240bb87a0493b37c"
+      },
+      "inputs_tracked_in_git": false,
+      "inputs_require_fetch": true,
+      "fetch_note": "data/ is gitignored. The user must clone https://github.com/Matteo-Ciciani/PAMpredict at git:4ad096ced18cd1cdca1a73f0f85530133f3d8593 and place Example/spacers.fna and Example/Phages/phages.fna at the paths above, then verify the sha256 values.",
+      "declared_orientation": "reverse",
+      "orientation_is_declared_upstream": false,
+      "expected_agent_behaviour": {
+        "must_verify_orientation_before_use": true,
+        "must_not_guess": true,
+        "acceptable_orientations": ["reverse"],
+        "reason": "Conserved flank signal is upstream as provided and downstream after reverse-complementing; Cas9 PAMs are downstream."
+      },
+      "expected_outcome_when_run": {
+        "protein_top_candidate": "NGG",
+        "protein_score_approx": 95.9,
+        "spacer_top_candidate": "NRG",
+        "spacer_score_approx": 84.5,
+        "ngg_spacer_score_approx": 82.2,
+        "support_spacer_count_ngg": 26,
+        "support_target_count_ngg": 55,
+        "distinct_target_contigs": 15,
+        "contigs_supporting_xgg": 7,
+        "contig_level_xgg_fraction": 0.467,
+        "contig_fraction_denominator": "contig count (15), NOT distinct consensus PAM types (11)",
+        "evidence_status_ngg": "concordant_support",
+        "evidence_status_nrg": "concordant_support",
+        "evidence_status_nag": "protein_neutral_spacer_neutral",
+        "evidence_status_nga": "protein_neutral_spacer_neutral"
+      },
+      "traps_the_agent_must_avoid": [
+        "Reporting NRG as the answer because it is the spacer-path top candidate. NRG is a wider IUPAC set than NGG; ranking first is not evidence that NAG and NGG behave alike.",
+        "Treating support_target_count=55 as 55 independent phages. 20 of 37 spacers hit one contig (uvig_394886); collapsing to one consensus per contig gives 7 of 15 contigs supporting xGG (46.7%), not a 55-fold independent replication. The contig-level denominator is the contig count (15), never the number of distinct consensus PAM strings (11).",
+        "Presenting this as an independent or generalisation result. The protein is an exact Protein2PAM training exposure and the targets are a human gut virome library, not an S. pyogenes niche.",
+        "Calling the score a cleavage probability. It is a candidate-triage compatibility value centred on 50."
+      ],
+      "honest_headline": "Both paths agree that NGG/xGG is supported; the protein path alone already ranks NGG first, so on this case the second path corroborates rather than changes the answer."
+    },
+    {
+      "case_id": "sp7f7-published-flanks",
+      "case_file": "benchmarks/dual_evidence_cases/case_sp7f7_published_flanks.json",
+      "evidence_class": "published_aggregate_flanks",
+      "available_inputs": {
+        "protein": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/protein.faa (WP_038431314.1)",
+        "spacers": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/spacers.fna",
+        "published_flanks": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/published_flanks.tsv",
+        "targets": []
+      },
+      "input_sha256": {
+        "spacers.fna": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329",
+        "published_flanks.tsv": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076",
+        "protein.faa": "bce05ccfecca4bbbc3065884eb6948236a4f156a3e575f1a8e200ff6c70a347f"
+      },
+      "inputs_tracked_in_git": true,
+      "declared_orientation": "forward",
+      "orientation_is_declared_upstream": true,
+      "orientation_source_field": "orientation_PAMbased (all 7 usable rows)",
+      "expected_agent_behaviour": {
+        "must_verify_orientation_before_use": false,
+        "reason": "The source table states orientation per row, unlike the PAMpredict bundle.",
+        "must_still_disclose_evidence_class": true
+      },
+      "expected_outcome_when_run": {
+        "usable_records": 7,
+        "source_rows": 8,
+        "excluded_row_reason": "one hit=0 row carries no PAM-side flank",
+        "protein_top_candidate": "NRG",
+        "protein_score_approx": 96.0,
+        "ngg_protein_score_approx": 95.9,
+        "spacer_top_candidate": "NGG",
+        "ngg_spacer_score_approx": 88.9,
+        "nrg_spacer_score_approx": 88.9,
+        "support_spacer_count_ngg": 7,
+        "support_target_count_ngg": 0,
+        "contig_level_xgg_fraction": 1.0,
+        "contig_level_note": "1.0 here is 7/7 aggregate records, one per spacer; there is no contig concentration (max_spacers_on_one_contig=1), so this must not be read as independent replication.",
+        "evidence_status_ngg": "concordant_support_limited_independence"
+      },
+      "traps_the_agent_must_avoid": [
+        "Reading support_target_count=0 as 'no spacer evidence'. For this class it is deliberately zero because one published consensus flank is not an independent target; support_spacer_count=7 is the real signal.",
+        "Upgrading concordant_support_limited_independence to high priority. The status name already encodes the limitation.",
+        "Describing these flanks as observed protospacer hits. They are per-spacer aggregate consensus sequences; raw target identifiers are unavailable from the source.",
+        "Comparing this system's spacer score directly against the SpCas9 case's spacer score. Different libraries, different evidence classes, not calibrated against each other."
+      ],
+      "honest_headline": "The aggregate-flank path gives NGG a strong score and rejects NAG/NGA, but it cannot supply independent target support, so it is corroborative evolutionary evidence only.",
+      "cannot_substitute_for": "This case is NOT a substitute for the web interface's 'spacer + raw targets' upload path. It has no target FASTA, its support_target_count is always 0 by construction, and its orientation comes from the source table rather than being recomputed. Use a raw-target case to exercise upload, alignment, orientation-warning or target-counting behaviour."
+    }
+  ],
+
+  "expected_agent_behaviour_by_scenario": [
+    {
+      "scenario": "normal_paired_run",
+      "input": "protein + spacers + targets, direction already verified",
+      "expected": "Runs the dual-evidence path, reports both raw scores, the support counts, and the evidence_status label; states that path 2 corroborates rather than proves activity.",
+      "must_not": "Report a single fused 'probability' or drop the losing path's numbers."
+    },
+    {
+      "scenario": "missing_targets",
+      "input": "protein + spacers but no targets",
+      "expected": "Runs protein-only, states plainly that the spacer path could not run and why, and names what to supply; evidence_status becomes protein_only_unverified rather than concordant_support.",
+      "must_not": "Imply that the protein result is spacer-confirmed."
+    },
+    {
+      "scenario": "orientation_not_declared",
+      "input": "spacers whose direction the source does not state",
+      "expected": "Runs or reports protein-only first, calls list_confirmation_options, and asks the user; sets reverse_spacers only from the user's explicit answer.",
+      "must_not": "Guess the direction, or silently try both and keep the better-looking one."
+    },
+    {
+      "scenario": "tool_failure_or_unsupported_system",
+      "input": "no clear PAM found, a non-Cas9 system, or a failed run",
+      "expected": "Reports the failure as a failure with the concrete reason; does not convert it into a negative biological conclusion.",
+      "must_not": "Report 'no PAM' when the tool actually errored, or claim support it never computed."
+    }
+  ],
+
+  "value_statement": {
+    "what_path_2_actually_adds_on_the_one_case_where_it_can_be_tested": [
+      "It independently reproduces xGG support from a different data type (spacer-protospacer homology) than the sequence model.",
+      "It rejects NAG and NGA: observed 6.7% and 2.9% versus a 3.2% NGG frequency, i.e. 1.16x and 0.50x background enrichment.",
+      "It is orientation-sensitive: xGG frequency falls from 70.3% to 0.0% when the spacers are reverse-complemented.",
+      "It requires real homology: any shuffling of spacers or target contigs removes all alignments, so the signal is not a base-composition artifact."
+    ],
+    "what_it_does_not_add": [
+      "It does not change the top-1 answer on this case: the protein path already ranks NGG first.",
+      "It cannot yet provide independent target support, because the target library is not virus-clustered and is not from the host's ecological niche.",
+      "It provides no independent generalisation evidence: strict independent paired systems remain zero."
+    ],
+    "conclusion": "Second-path value is established as corroboration and as a decoy filter under controls, on one engineering-regression case. It is not established as an accuracy improvement, and this is reported as such."
+  },
+
+  "reproduction": {
+    "paired_case": "PYTHONPATH=.pylibs:.reference/Protein2PAM:src:. HF_HOME=$PWD/data/checkpoints/hf python scripts/run_dual_evidence_case.py --case benchmarks/dual_evidence_cases/case_spcas9_pampredict_paired.json --outdir data/parsed/dual_evidence_case_spcas9 --device cpu",
+    "published_flank_case": "PYTHONPATH=.pylibs:.reference/Protein2PAM:src:. HF_HOME=$PWD/data/checkpoints/hf python scripts/run_dual_evidence_case.py --case benchmarks/dual_evidence_cases/case_sp7f7_published_flanks.json --outdir data/parsed/dual_evidence_case_sp7f7 --device cpu",
+    "value_controls": "PYTHONPATH=src:. python scripts/verify_dual_evidence_value.py --case benchmarks/dual_evidence_cases/case_spcas9_pampredict_paired.json --out data/parsed/dual_evidence_case_spcas9/value_check.json --summary data/parsed/dual_evidence_case_spcas9/case_summary.json",
+    "offline_only": "add --spacer-only to the first command to skip model loading entirely",
+    "regression_tests": "pamdict.benchmark.tests.test_dual_evidence_cases (11 offline tests)"
+  },
+
+  "integration_notes_for_task_b": {
+    "shared_file_conflict": "src/pamdict/agent/tools.py is owned by task B. Task C does not modify it.",
+    "no_new_dependencies": "The case scripts use only the existing pamdict package; no new third-party dependency is introduced for task A to package.",
+    "outputs_are_files": "Both cases write case_summary.json, spacer_hits.tsv, spacer_scores.tsv, protein_scores.tsv and fused_scores.tsv into the chosen outdir; an agent tool can surface these paths or parse case_summary.json.",
+    "privacy": "case_summary.json contains hashes, scores, counts and short flank strings only. It carries no API keys, no credentials and no full genome or full protein sequences, so it is safe to summarise to a language model."
+  },
+
+  "integration_notes_for_task_a": {
+    "runtime": "Both cases run on CPU; --spacer-only needs neither torch nor model weights.",
+    "model_requirement": "cas9_full weights under HF_HOME (data/checkpoints/hf), roughly the existing local cache.",
+    "windows_caveat": "Case paths are workspace-relative and contain no spaces. The PAMpredict files live under data/, which is gitignored, so a Windows trial package must either fetch them at first run or mark the paired case unavailable and fall back to the published-flank case, which is tracked in Git."
+  }
+}

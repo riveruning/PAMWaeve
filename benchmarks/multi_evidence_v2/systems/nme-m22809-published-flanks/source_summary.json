@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "nme-m22809-published-flanks",
+    "assembly_accession": "GCF_001697365.1",
+    "chromosome_accession": "CP016647.1",
+    "protein_record_id": "WP_002235162.1",
+    "host_taxon": "Neisseria meningitidis",
+    "host_strain": "M22809",
+    "crispr_type": "Type II-C",
+    "expected_spacer_rows": 25,
+    "expected_hit_rows": 11
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/raw/external_datasets/ncbi_cas9_candidate_genomes/ncbi_dataset/data/GCF_001697365.1/protein.faa",
+    "protein_source_kind": "NCBI assembly protein",
+    "source_subtype_filter": null,
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 25,
+    "published_flank_rows": 11,
+    "no_hit_rows": 14
+  },
+  "orientation_sources": {
+    "orientation_CRISPRCasdb_fallback": 25
+  },
+  "artifacts": {
+    "protein_faa_sha256": "b6e927791e7fe1f8b4749e53391d7083ddb93e2690542a6f7e8422f9b94fdbde",
+    "protein_sequence_sha256": "77166d1d9da31cbbd65273d784849e22a0be6f7328cd9b417e1adf44c63e1c6b",
+    "spacers_fna_sha256": "8208d16cd4697ee3c90a1778e24c0ba8eaafb30d36afe066e5a37e2004d25b6d",
+    "published_flanks_tsv_sha256": "08ab00c472a9671eac09e50d4c740ab734181ded4b24ceda7866f388654624ba"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

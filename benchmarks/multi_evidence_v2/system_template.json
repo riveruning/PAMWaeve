@@ -1,0 +1,46 @@
+{
+  "system_id": "replace-with-stable-id",
+  "tier": "retrospective_biological",
+  "status": "curating",
+  "crispr_type": "replace",
+  "cas_family": "replace",
+  "host_taxon": "replace",
+  "host_strain": "replace-or-not-recorded",
+  "available_tracks": [
+    "protein_only"
+  ],
+  "protein_model": "replace",
+  "protein_fasta": "data/raw/replace.faa",
+  "protein_record_id": "replace",
+  "pam_side": "upstream-or-downstream",
+  "pam_lengths": [
+    3
+  ],
+  "gold_pam_spectrum": {
+    "3": [
+      "replace"
+    ]
+  },
+  "gold_evidence_type": "experimental_functional_spectrum",
+  "gold_doi": "replace",
+  "gold_assay": {
+    "assay_type": "replace",
+    "activity_values_available": false,
+    "conditions": "replace",
+    "source_locator": "replace table/figure/supplement"
+  },
+  "protein_training_exposure": "unknown",
+  "target_independence": "not_applicable",
+  "split_group": "replace",
+  "provenance": {
+    "protein": {
+      "source_name": "replace",
+      "source_uri": "replace",
+      "source_version": "replace",
+      "license": "replace",
+      "sha256": "replace-with-64-lowercase-hex",
+      "sha256_scope": "selected_fasta_record_sequence"
+    }
+  },
+  "notes": "Record unresolved fields explicitly; do not guess."
+}

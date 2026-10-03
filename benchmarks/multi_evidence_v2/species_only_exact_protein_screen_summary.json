@@ -1,0 +1,18 @@
+{
+  "format_version": 1,
+  "pairs_screened": 170,
+  "accessions_screened": 170,
+  "exact_protein_pairs": 8,
+  "distinct_exact_experimental_proteins": 6,
+  "exact_experimental_abbreviations": [
+    "Ece",
+    "Nme2",
+    "Psp",
+    "Seq2",
+    "Tsp",
+    "Wvi"
+  ],
+  "fetch_errors": 8,
+  "selection_rule": "register at most one accession per exact experimental protein after reviewing cohort quality",
+  "out": "benchmarks/multi_evidence_v2/species_only_exact_protein_screen.tsv"
+}

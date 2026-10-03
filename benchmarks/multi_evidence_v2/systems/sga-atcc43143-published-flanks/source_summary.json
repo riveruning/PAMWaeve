@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sga-atcc43143-published-flanks",
+    "chromosome_accession": "AP012053.1",
+    "protein_record_id": "Sga",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus gallolyticus subsp. gallolyticus",
+    "host_strain": "ATCC 43143",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 37,
+    "expected_hit_rows": 23
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 37,
+    "published_flank_rows": 23,
+    "no_hit_rows": 14
+  },
+  "orientation_sources": {
+    "orientation_CRISPRCasdb_fallback": 10,
+    "orientation_PAMbased": 27
+  },
+  "artifacts": {
+    "protein_faa_sha256": "f6b63877e5f06a1eafedc47c765f4946c0e5614be3d5e8642f9e26239545f125",
+    "protein_sequence_sha256": "288587c9c8275c3c62c6384a1936c1970a5441a61cc8ee1e826eca4e2fd571f0",
+    "spacers_fna_sha256": "53c110d9faae31719871f3e1efddfde206082b42861187099821340079d1cd03",
+    "published_flanks_tsv_sha256": "87cb093e1ee797c44b403a664db733507993221ca8c7faeb9c5b4f6b236f1285"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

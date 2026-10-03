@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sth1a-lmg18311-published-flanks",
+    "chromosome_accession": "CP000023.1",
+    "protein_record_id": "Sth1A",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus thermophilus",
+    "host_strain": "LMG 18311",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 33,
+    "expected_hit_rows": 23
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 33,
+    "published_flank_rows": 23,
+    "no_hit_rows": 10
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 33
+  },
+  "artifacts": {
+    "protein_faa_sha256": "87eb2d74d600b558024d508c96e96f2f5b152f1ccf6f6e0f7e100d541a6384cb",
+    "protein_sequence_sha256": "f7263a92f476a88fcd2999f5f645c7eec121bad46093967f6ab83bcbf804dc8f",
+    "spacers_fna_sha256": "ed65497162a106730527a8b35dba244bab0156e39eb568898401f80037cd54d2",
+    "published_flanks_tsv_sha256": "2fc6dce20670f1d80708c51b48018286037ae6dca84686dde92f6657e20157fd"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

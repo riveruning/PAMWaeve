@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "sgo-challis-ch1-published-flanks",
+    "chromosome_accession": "CP000725.1",
+    "protein_record_id": "Sgo",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Streptococcus gordonii",
+    "host_strain": "Challis substr. CH1",
+    "crispr_type": "Type II-C",
+    "source_subtype": "CAS-TypeIIC",
+    "expected_spacer_rows": 26,
+    "expected_hit_rows": 25
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIC",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 26,
+    "published_flank_rows": 25,
+    "no_hit_rows": 1
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 26
+  },
+  "artifacts": {
+    "protein_faa_sha256": "9ea5cab29e6e5c62abc36c73ac0a3adab8d60668249d3202a55ba64264e2c73e",
+    "protein_sequence_sha256": "a853688e03f32cb7d2d25914110ff0aa67f9d91c6338cb9b9b1ca288b6f84fb2",
+    "spacers_fna_sha256": "c0206dd13eca9702e5d6abd435dd93a445a02b98de2ca43af6be5addd918b77b",
+    "published_flanks_tsv_sha256": "9688e25d5b549f4d582e5b9d91a526d473f9e1c75cccdc6aeb075cca7c2acd32"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}

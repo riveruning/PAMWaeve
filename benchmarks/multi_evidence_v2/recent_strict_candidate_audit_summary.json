@@ -1,0 +1,17 @@
+{
+  "format_version": 1,
+  "identity_definition": "1 - global_levenshtein_distance / max(sequence_lengths)",
+  "identity_threshold": 0.9,
+  "sensitivity_identity_threshold": 0.85,
+  "official_cas9_rows": 15843,
+  "candidate_count": 3,
+  "decision_counts": {
+    "BLOCKED_EXACT_SEQUENCE_LINK": 1,
+    "EXCLUDE_OFFICIAL_NEAR90": 1,
+    "REGISTER_STRICT_PROTEIN_ONLY": 1
+  },
+  "registered_ids": [
+    "Cj4Cas9"
+  ],
+  "output_tsv": "benchmarks/multi_evidence_v2/recent_strict_candidate_audit.tsv"
+}

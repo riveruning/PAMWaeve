@@ -1,0 +1,79 @@
+{
+  "format_version": 1,
+  "case_id": "sp7f7-published-flanks",
+  "system_id": "sp7f7-published-flanks",
+  "title": "S. pyogenes 7F7 Cas9 protein + CRISPRCasDB published per-spacer aggregate flanks",
+  "evidence_tier": "retrospective_biological",
+  "claim_scope": "retrospective evolutionary evidence; aggregate flanks, not raw target alignments",
+  "independent_benchmark_eligible": false,
+  "candidate_pams": ["NGG", "NAG", "NGA", "NRG"],
+  "gold_pam_spectrum": ["NGG"],
+  "pam_side": "downstream",
+  "pam_length": 3,
+  "max_mismatches": null,
+  "prior_strength": 2.0,
+  "min_effective_spacers": 5,
+  "protein": {
+    "fasta": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/protein.faa",
+    "record_id": "WP_038431314.1",
+    "model": "cas9_full",
+    "source": "NCBI Datasets RefSeq assembly protein, GCF_000767505.1",
+    "source_uri": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000767505.1/",
+    "source_version": "GCF_000767505.1; WP_038431314.1",
+    "license": "NCBI molecular data; no NCBI-imposed reuse restrictions (submitter rights may apply)"
+  },
+  "spacers": [
+    "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/spacers.fna"
+  ],
+  "targets": [],
+  "published_flanks": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/published_flanks.tsv",
+  "expected_input_sha256": {
+    "spacers.fna": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329",
+    "published_flanks.tsv": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076",
+    "protein.faa": "bce05ccfecca4bbbc3065884eb6948236a4f156a3e575f1a8e200ff6c70a347f"
+  },
+  "spacer_orientation": {
+    "decision": "forward",
+    "evidence": "CRISPRCasDB supplies an explicit per-row orientation field. For this subset every row records orientation_source=orientation_PAMbased, i.e. the published flanks were already oriented using PAM information. The flank columns used are the already-oriented upstream/downstream fields, so no further flipping is applied. Unlike the PAMpredict bundle, this source states its orientation rather than leaving it to be inferred.",
+    "not_evidence": "The oriented_spacer column is the source table's own spacer string; agreement between that column and spacers.fna is verified by the scorer and is not itself an orientation argument."
+  },
+  "provenance": {
+    "spacers": {
+      "source_name": "Vink et al. CRISPRCasDB spacer table; CP007240.1 subset",
+      "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+      "source_version": "Additional file 2; CP007240.1 subset",
+      "doi": "10.1186/s13059-021-02495-9",
+      "license": "CC-BY-4.0",
+      "redistribution": "CC-BY: redistributable with attribution."
+    },
+    "published_flanks": {
+      "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+      "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+      "source_version": "Additional file 2; CP007240.1 subset",
+      "doi": "10.1186/s13059-021-02495-9",
+      "license": "CC-BY-4.0",
+      "redistribution": "CC-BY: redistributable with attribution.",
+      "raw_target_identifiers_available": false
+    },
+    "protein": {
+      "source_name": "NCBI Datasets RefSeq assembly protein",
+      "source_uri": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000767505.1/",
+      "source_version": "GCF_000767505.1; WP_038431314.1",
+      "license": "NCBI molecular data; no NCBI-imposed reuse restrictions"
+    }
+  },
+  "independent_cross_check": {
+    "what": "The 8 spacers in this subset were independently re-derived from the whole genome by the local CCTyper genome-annotation pipeline.",
+    "artifact": "data/parsed/genome_agent_real_20260928/dual_fixed/annotation/spacers/NZ_CP007240.1_1.fa",
+    "result": "8 of 8 spacers match exactly on the same strand; 0 require reverse-complementing.",
+    "caveat": "This artifact is a local run output and is not tracked in Git; it is machine-local corroboration, not a versioned repo fact."
+  },
+  "limitations": [
+    "Published flanks are per-spacer AGGREGATE consensus sequences (23 nt), not raw per-hit alignments.",
+    "Raw target contig identifiers are unavailable, so target independence cannot be assessed.",
+    "Only 7 of 8 spacers have a non-empty PAM-side flank; the hit=0 row is excluded with its source row id retained.",
+    "The protein is a near-exact Protein2PAM training relative and the gold PAM is species-level (canonical SpCas9 NGG), so this is retrospective only.",
+    "Aggregate flank evidence is evolutionary, not cleavage activity.",
+    "support_target_count is deliberately zero for this evidence class because one consensus flank is not an independent target."
+  ]
+}

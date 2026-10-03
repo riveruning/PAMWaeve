@@ -1,0 +1,1042 @@
+{
+  "format_version": 2,
+  "benchmark_name": "PAMPRIDICT multi-evidence benchmark v2",
+  "frozen_at": "2026-09-22",
+  "candidate_policy": "exhaustive concrete A/C/G/T candidates ranked within PAM length",
+  "minimum_strict_systems": 5,
+  "systems": [
+    {
+      "system_id": "spcas9-pampredict-example",
+      "evaluation_role": "development_regression",
+      "tier": "engineering_regression",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus pyogenes",
+      "host_strain": "not_recorded_in_example_bundle",
+      "available_tracks": [
+        "protein_only",
+        "paired_evidence"
+      ],
+      "protein_model": "cas9_full",
+      "protein_fasta": "data/raw/cas9_full.fasta",
+      "protein_record_id": "SpCas9",
+      "spacer_fasta": "data/raw/external_datasets/PAMpredict/Example/spacers.fna",
+      "target_fastas": [
+        "data/raw/external_datasets/PAMpredict/Example/Phages/phages.fna"
+      ],
+      "spacer_orientation": "reverse",
+      "pam_side": "downstream",
+      "pam_lengths": [
+        3
+      ],
+      "max_mismatches": 4,
+      "gold_pam_spectrum": {
+        "3": [
+          "NGG"
+        ]
+      },
+      "gold_evidence_type": "engineering_known_pam",
+      "gold_doi": "10.1186/s13059-015-0818-7",
+      "gold_assay": {
+        "assay_type": "known_reference",
+        "activity_values_available": false,
+        "conditions": "not recorded in the PAMpredict example bundle",
+        "source_locator": "DOI 10.1186/s13059-015-0818-7"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "family_prior_pam": "NGG",
+      "protein_training_exposure": "exact",
+      "target_independence": "contig_only",
+      "target_dataset": {
+        "name": "PAMpredict example phages",
+        "release": "git:4ad096ced18cd1cdca1a73f0f85530133f3d8593",
+        "frozen_at": "2026-09-22",
+        "selection_policy": "upstream PAMpredict example bundle; not selected by PAMPRIDICT scores",
+        "cluster_policy": "not_clustered"
+      },
+      "split_group": "engineering/spcas9-positive-control",
+      "provenance": {
+        "protein": {
+          "source_name": "Protein2PAM cas9_full training FASTA",
+          "source_uri": "https://github.com/Profluent-AI/Protein2PAM",
+          "source_version": "git:887026ce058d6a53b04b3c9205990a65d5a92306",
+          "license": "CC-BY-NC-4.0",
+          "sha256": "0b7df5a184af9a6086e68775743c9f88f90fc81cf58931719cfa4b8e48d3f6ef",
+          "sha256_scope": "selected_fasta_record_sequence"
+        },
+        "spacers": {
+          "source_name": "PAMpredict example spacers",
+          "source_uri": "https://github.com/Matteo-Ciciani/PAMpredict",
+          "source_version": "git:4ad096ced18cd1cdca1a73f0f85530133f3d8593",
+          "license": "CC-BY-NC-ND-4.0",
+          "sha256": "7f4c3de1e0d8e827d8ef7a5e78b36a7e88d7574954814e9a289c007e892885a1",
+          "sha256_scope": "file_bytes"
+        },
+        "targets": [
+          {
+            "source_name": "PAMpredict example phage contigs",
+            "source_uri": "https://github.com/Matteo-Ciciani/PAMpredict",
+            "source_version": "git:4ad096ced18cd1cdca1a73f0f85530133f3d8593",
+            "license": "CC-BY-NC-ND-4.0",
+            "sha256": "1bcb43111b49ed675c988a06542c61b4d455c2b977c1b7fd240bb87a0493b37c",
+            "sha256_scope": "file_bytes"
+          }
+        ]
+      },
+      "notes": "Positive-control reconstruction only; never report as independent generalization."
+    },
+    {
+      "system_id": "sp7f7-published-flanks",
+      "evaluation_role": "development_regression",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus pyogenes",
+      "host_strain": "7F7",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/protein.faa",
+      "protein_record_id": "WP_038431314.1",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [3],
+      "gold_pam_spectrum": {
+        "3": ["NGG"]
+      },
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1186/s13059-015-0818-7",
+      "gold_assay": {
+        "assay_type": "PAM depletion and cleavage validation",
+        "activity_values_available": true,
+        "conditions": "Canonical S. pyogenes Cas9 functional PAM spectrum; not assayed on the exact 7F7 isolate protein.",
+        "source_locator": "Figure 1 and associated PAM depletion experiments"
+      },
+      "gold_system_match": "species_ortholog",
+      "protein_training_exposure": "near",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-23",
+        "row_selection_policy": "Rows whose accession token set contains CP007240.1; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use PAM-based orientation when unambiguous; otherwise CRISPRCasDB orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/streptococcus-pyogenes",
+      "provenance": {
+        "protein": {
+          "source_name": "NCBI Datasets RefSeq assembly protein",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000767505.1/",
+          "source_version": "GCF_000767505.1; WP_038431314.1",
+          "license": "NCBI molecular data; no NCBI-imposed reuse restrictions (submitter rights may apply)",
+          "sha256": "a0d235d74c44a0c7f9e6b81d5dfa984c2b32770ccebb8931af83b2cc62eddb16",
+          "sha256_scope": "selected_fasta_record_sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP007240.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP007240.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Eight same-accession spacers, seven with published aggregate flanks. Protein is a near-exact Protein2PAM training relative; gold is species-level, so this is retrospective only."
+    },
+    {
+      "system_id": "nme-m22809-published-flanks",
+      "evaluation_role": "development_regression",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Neisseria meningitidis",
+      "host_strain": "M22809",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/protein.faa",
+      "protein_record_id": "WP_002235162.1",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [8],
+      "gold_pam_spectrum": {
+        "8": ["NNNNGATT"]
+      },
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1073/pnas.1313587110",
+      "gold_assay": {
+        "assay_type": "plasmid interference and cleavage validation",
+        "activity_values_available": false,
+        "conditions": "Canonical N. meningitidis Cas9 PAM; not assayed on the exact M22809 isolate protein.",
+        "source_locator": "PAM definition and interference experiments"
+      },
+      "gold_system_match": "species_ortholog",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-23",
+        "row_selection_policy": "Rows whose accession token set contains CP016647.1; hit=0 rows retained for coverage.",
+        "orientation_policy": "PAM orientation is unknown; use CRISPRCasDB forward orientation as the preregistered fallback.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/neisseria-meningitidis",
+      "provenance": {
+        "protein": {
+          "source_name": "NCBI Datasets RefSeq assembly protein",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_001697365.1/",
+          "source_version": "GCF_001697365.1; WP_002235162.1",
+          "license": "NCBI molecular data; no NCBI-imposed reuse restrictions (submitter rights may apply)",
+          "sha256": "77166d1d9da31cbbd65273d784849e22a0be6f7328cd9b417e1adf44c63e1c6b",
+          "sha256_scope": "selected_fasta_record_sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP016647.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "8208d16cd4697ee3c90a1778e24c0ba8eaafb30d36afe066e5a37e2004d25b6d",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP016647.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "08ab00c472a9671eac09e50d4c740ab734181ded4b24ceda7866f388654624ba",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Twenty-five same-accession spacers, eleven with published aggregate flanks. Exact Protein2PAM training exposure and species-level gold make this retrospective only."
+    },
+    {
+      "system_id": "cj-nctc11168-published-flanks",
+      "evaluation_role": "development_regression",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Campylobacter jejuni subsp. jejuni",
+      "host_strain": "NCTC 11168",
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/protein.faa",
+      "protein_record_id": "YP_002344900.1",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [8],
+      "gold_pam_spectrum": {
+        "8": ["NNNNRYAC"]
+      },
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/ncomms14500",
+      "gold_assay": {
+        "assay_type": "in vitro cleavage and PAM library validation",
+        "activity_values_available": true,
+        "conditions": "C. jejuni NCTC 11168 Cas9 biochemical and cellular PAM characterization.",
+        "source_locator": "PAM library and cleavage experiments"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-23",
+        "row_selection_policy": "Rows whose accession token set contains AL111168.1; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use the published PAM-based reverse orientation and reverse-complement/swap flanks into spacer orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/campylobacter-jejuni-nctc11168",
+      "provenance": {
+        "protein": {
+          "source_name": "NCBI Datasets RefSeq assembly protein",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000009085.1/",
+          "source_version": "GCF_000009085.1; YP_002344900.1",
+          "license": "NCBI molecular data; no NCBI-imposed reuse restrictions (submitter rights may apply)",
+          "sha256": "47d46d3653037f9076264916e81192682e1d178885b9c75d6b9af2cd84734369",
+          "sha256_scope": "selected_fasta_record_sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; AL111168.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "72429a8b920e8e7872d9119d90b9aadc69534e060652388c2f9a2cfa1dc597b3",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; AL111168.1 subset",
+          "license": "CC-BY-4.0",
+          "sha256": "620a289fab96c509776c3f372549e4c76df32b62cdc4eedf9da7ad555d6afff9",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Four same-accession spacers, two with published aggregate flanks. Exact strain/protein gold but exact Protein2PAM training exposure; retrospective only."
+    },
+    {
+      "system_id": "tde-atcc35405-published-flanks",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Treponema denticola",
+      "host_strain": "ATCC 35405",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/protein.faa",
+      "protein_record_id": "Tde",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [6],
+      "gold_pam_spectrum": {"6": ["NAAAAY"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "TdeCas9 from T. denticola ATCC 35405; consensus from the paper's Cas9 database.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Tde"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for AE017226.1 and CAS-TypeIIA; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use the published PAM-based forward orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/treponema-denticola-atcc35405",
+      "provenance": {
+        "protein": {
+          "source_name": "Gasiunas et al. Cas9 database",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/",
+          "source_version": "Supplementary Data 2; Tde",
+          "license": "CC-BY-4.0",
+          "sha256": "a16cf6788a6dca8a92d07b7c23ad23cd3ee4fccbba55ff2f939d59c84edd5dcd",
+          "sha256_scope": "selected protein sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; AE017226.1 Type II-A subset",
+          "license": "CC-BY-4.0",
+          "sha256": "93e369f9897f7aa0c7de46ba45c9d28785c6206bc0ac82258d863ba3a5036f7c",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; AE017226.1 Type II-A subset",
+          "license": "CC-BY-4.0",
+          "sha256": "731539342dc8ec76dbf6620468bc69d926eebcf8c2b4dfea2fc29940bcfa775e",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Exact experimental protein/strain and 31 aggregate flank records. Protein is an exact training exposure; target independence remains unavailable."
+    },
+    {
+      "system_id": "sgo-challis-ch1-published-flanks",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus gordonii",
+      "host_strain": "Challis substr. CH1",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/protein.faa",
+      "protein_record_id": "Sgo",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [6],
+      "gold_pam_spectrum": {"6": ["NNAAAG"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "SgoCas9 from S. gordonii Challis substr. CH1; consensus from the paper's Cas9 database.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Sgo"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for CP000725.1 and CAS-TypeIIC; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use the published PAM-based reverse orientation and reverse-complement/swap flanks.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/streptococcus-gordonii-challis",
+      "provenance": {
+        "protein": {
+          "source_name": "Gasiunas et al. Cas9 database",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/",
+          "source_version": "Supplementary Data 2; Sgo",
+          "license": "CC-BY-4.0",
+          "sha256": "a853688e03f32cb7d2d25914110ff0aa67f9d91c6338cb9b9b1ca288b6f84fb2",
+          "sha256_scope": "selected protein sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP000725.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "c0206dd13eca9702e5d6abd435dd93a445a02b98de2ca43af6be5addd918b77b",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP000725.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "9688e25d5b549f4d582e5b9d91a526d473f9e1c75cccdc6aeb075cca7c2acd32",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Exact experimental protein/strain and 25 aggregate flank records. Protein is an exact training exposure; target independence remains unavailable."
+    },
+    {
+      "system_id": "sth1a-lmg18311-published-flanks",
+      "evaluation_role": "retrospective_holdout_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus thermophilus",
+      "host_strain": "LMG 18311",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/protein.faa",
+      "protein_record_id": "Sth1A",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["NHGYRAA"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "Sth1ACas9 from S. thermophilus LMG 18311; consensus from the paper's Cas9 database.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Sth1A"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for CP000023.1 and CAS-TypeIIC; three Type III-A rows are excluded.",
+        "orientation_policy": "Use the published PAM-based forward orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/streptococcus-thermophilus-lmg18311",
+      "provenance": {
+        "protein": {
+          "source_name": "Gasiunas et al. Cas9 database",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/",
+          "source_version": "Supplementary Data 2; Sth1A",
+          "license": "CC-BY-4.0",
+          "sha256": "f7263a92f476a88fcd2999f5f645c7eec121bad46093967f6ab83bcbf804dc8f",
+          "sha256_scope": "selected protein sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP000023.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "ed65497162a106730527a8b35dba244bab0156e39eb568898401f80037cd54d2",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP000023.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "2fc6dce20670f1d80708c51b48018286037ae6dca84686dde92f6657e20157fd",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Exact experimental protein/strain and 23 aggregate flank records after subtype filtering. Protein is an exact training exposure; target independence remains unavailable."
+    },
+    {
+      "system_id": "ain-ryc-mr95-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Acidaminococcus intestini",
+      "host_strain": "RyC-MR95",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/protein.faa",
+      "protein_record_id": "Ain",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [5],
+      "gold_pam_spectrum": {"5": ["NRTAW"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "AinCas9 from A. intestini RyC-MR95; consensus from the paper's Cas9 database.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Ain"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for CP003058.1 and CAS-TypeIIA; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use the published PAM-based forward orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/acidaminococcus-intestini-ryc-mr95",
+      "provenance": {
+        "protein": {
+          "source_name": "Gasiunas et al. Cas9 database",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/",
+          "source_version": "Supplementary Data 2; Ain; exact translation also present in CP003058.1",
+          "license": "CC-BY-4.0",
+          "sha256": "43717d44ced0ac18b548416372a62cf0a6373cff4712d992eecaa6d7cb3bb9b5",
+          "sha256_scope": "selected protein sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP003058.1 Type II-A subset",
+          "license": "CC-BY-4.0",
+          "sha256": "abad24318d526f5b88c3263cd40034b2708c90ad770cd7453029bcfcb85775f0",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; CP003058.1 Type II-A subset",
+          "license": "CC-BY-4.0",
+          "sha256": "3578cdd383f024c346d584c9fb26f13fcb62bb8eabe9d699a49cc4e868efe64e",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Exact strain and Cas9 protein were verified against CP003058.1 GenBank translations. The protein is an exact Protein2PAM training exposure; this is a retrospective diagnostic expansion, not an independent holdout."
+    },
+    {
+      "system_id": "ssa-jim8777-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus salivarius",
+      "host_strain": "JIM8777",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/protein.faa",
+      "protein_record_id": "Ssa",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["NNAGAAA"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "SsaCas9 from S. salivarius JIM8777; consensus from the paper's Cas9 database.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Ssa"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for FR873482.1 and CAS-TypeIIC; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use the published PAM-based forward orientation.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/streptococcus-salivarius-jim8777",
+      "provenance": {
+        "protein": {
+          "source_name": "Gasiunas et al. Cas9 database",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/",
+          "source_version": "Supplementary Data 2; Ssa; exact translation also present in FR873482.1",
+          "license": "CC-BY-4.0",
+          "sha256": "2a24a5d691d595d29b86d0a9cf4af55d22933bcdfd63fb0c13b927eba5fe23ff",
+          "sha256_scope": "selected protein sequence"
+        },
+        "spacers": {
+          "source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; FR873482.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "48c1d2236bfbf85fbd67e0a8051c8805a4d6c9b26b25ac62d5955444373367eb",
+          "sha256_scope": "derived_file_bytes"
+        },
+        "published_flanks": {
+          "source_name": "Vink et al. per-spacer consensus flanks; oriented row subset",
+          "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/",
+          "source_version": "Additional file 2; FR873482.1 Type II-C subset",
+          "license": "CC-BY-4.0",
+          "sha256": "daf3325cba2386b5bc9713dec856de90328f0e57a8488b34efd6cd305ba41618",
+          "sha256_scope": "derived_file_bytes"
+        }
+      },
+      "notes": "Exact strain and Cas9 protein were verified against FR873482.1 GenBank translations. The protein is an exact Protein2PAM training exposure; this is a retrospective diagnostic expansion, not an independent holdout."
+    },
+    {
+      "system_id": "sga-atcc43143-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus gallolyticus subsp. gallolyticus",
+      "host_strain": "ATCC 43143",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/protein.faa",
+      "protein_record_id": "Sga",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [5],
+      "gold_pam_spectrum": {"5": ["NGGDH"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {
+        "assay_type": "cell-free PAM library cleavage screen",
+        "activity_values_available": true,
+        "conditions": "SgaCas9 from S. gallolyticus subsp. gallolyticus ATCC 43143; preference annotations were removed with the repository's tested PAM normalizer.",
+        "source_locator": "Supplementary Data 2, Cas9_database, Sga"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {
+        "name": "CRISPRCasDB spacer consensus flanks",
+        "doi": "10.1186/s13059-021-02495-9",
+        "release": "PMC8482600 Additional file 2",
+        "frozen_at": "2026-09-24",
+        "row_selection_policy": "Rows for AP012053.1 and CAS-TypeIIA; hit=0 rows retained for coverage.",
+        "orientation_policy": "Use PAM-based orientation when available; otherwise use the CRISPRCasDB orientation fallback.",
+        "raw_target_identifiers_available": false
+      },
+      "split_group": "retrospective/streptococcus-gallolyticus-atcc43143",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Sga; exact translation also present in AP012053.1", "license": "CC-BY-4.0", "sha256": "288587c9c8275c3c62c6384a1936c1970a5441a61cc8ee1e826eca4e2fd571f0", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; AP012053.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "53c110d9faae31719871f3e1efddfde206082b42861187099821340079d1cd03", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; AP012053.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "87cb093e1ee797c44b403a664db733507993221ca8c7faeb9c5b4f6b236f1285", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact strain and Cas9 protein verified against AP012053.1. Protein is an exact training exposure; 10 rows require the preregistered CRISPRCasDB orientation fallback."
+    },
+    {
+      "system_id": "smu-gs5-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus mutans",
+      "host_strain": "GS-5",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/protein.faa",
+      "protein_record_id": "Smu",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [5],
+      "gold_pam_spectrum": {"5": ["NGGDT"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "SmuCas9 from S. mutans GS-5.", "source_locator": "Supplementary Data 2, Cas9_database, Smu"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-24", "row_selection_policy": "Rows for CP003686.1 and CAS-TypeIIA; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based reverse orientation and normalize into spacer orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/streptococcus-mutans-gs5",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Smu; exact translation also present in CP003686.1", "license": "CC-BY-4.0", "sha256": "015684f1a67bb02c3f759f99ab1822b2ef811b260bff2b93cfb8e43344000626", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP003686.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "5cb5cb20693e00e31b0748329f902c431b7244e67ecadcdbc4b74e112a4b7476", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP003686.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "d94689b2de96ae38d2c008b3a83958d0a6345d997ca422f5bc3783ce82057e96", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact strain and Cas9 protein verified against CP003686.1. Protein is an exact training exposure; this is not an independent holdout."
+    },
+    {
+      "system_id": "sdy-ac2713-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus dysgalactiae subsp. equisimilis",
+      "host_strain": "AC-2713",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/protein.faa",
+      "protein_record_id": "Sdy",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [5],
+      "gold_pam_spectrum": {"5": ["NGGNG"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "SdyCas9 from S. dysgalactiae subsp. equisimilis AC-2713.", "source_locator": "Supplementary Data 2, Cas9_database, Sdy"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-24", "row_selection_policy": "Rows for HE858529.1 and CAS-TypeIIA; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based reverse orientation and normalize into spacer orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/streptococcus-dysgalactiae-ac2713",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Sdy; exact translation also present in HE858529.1", "license": "CC-BY-4.0", "sha256": "2b476818e1648b6e158da808692b408c8a8d32f227ebeeb6f0f942f6ffff8f7b", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; HE858529.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "65673b4b56debb0666b3dd88d47b3554aae094423b033de51cde77d207e43909", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; HE858529.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "02020cb82b82e93f1b81de24c4aae4eb15fe1622863b355904bb8f2eabcb375b", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact strain and Cas9 protein verified against HE858529.1. Both Atlas and literature exact-sequence labels use NGGNG; this remains a training-exposed diagnostic."
+    },
+    {
+      "system_id": "sag2-nem316-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_24",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus agalactiae",
+      "host_strain": "NEM316",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/protein.faa",
+      "protein_record_id": "Sag2",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [5],
+      "gold_pam_spectrum": {"5": ["NGGDW"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "Sag2Cas9 from S. agalactiae NEM316; preference annotations were removed with the repository's tested PAM normalizer.", "source_locator": "Supplementary Data 2, Cas9_database, Sag2"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-24", "row_selection_policy": "Rows for AL732656.1 and CAS-TypeIIA; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based forward orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/streptococcus-agalactiae-nem316",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Sag2; exact translation also present in AL732656.1", "license": "CC-BY-4.0", "sha256": "7b669277d9fb5380d4602fc7df95a677e1b00c01c5cd89ac5ee2c990d5624b1e", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; AL732656.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "3fc600f1421858abb952a0eae17251e30680ffc82915f50d512c0bb7c20001f1", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; AL732656.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "7e80bc595b195aa9df203befc940fabc6a7b0eedf8f81e3378d4a4d206fb8dd4", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact strain and Cas9 protein verified against AL732656.1. Training consensus is NGG while the experimental database reports a broader five-position spectrum; this is not an independent holdout."
+    },
+    {
+      "system_id": "ece-nctc12421-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Enterococcus cecorum",
+      "host_strain": "NCTC 12421",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/protein.faa",
+      "protein_record_id": "Ece",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["NNGHAAA"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "EceCas9 experimental protein; preference annotation W>C removed with the tested PAM normalizer.", "source_locator": "Supplementary Data 2, Cas9_database, Ece"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for LS483306.1 and CAS-TypeIIC; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based forward orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/enterococcus-cecorum-ece",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Ece; exact translation also present in LS483306.1", "license": "CC-BY-4.0", "sha256": "afcaed43f644527577f1b5939d5183de1b1aacc4b75d97b60206b3e8d4a283b1", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; LS483306.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "7147c05d799e464daf12be4ddb7e9027f0e8b72bfee31d589eee9c09f8655120", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; LS483306.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "515e7f6856d6ac9a25db4f91cb28401196f3fd0f476fc9497e64917996ce2d65", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "The experimental table did not record a strain; exact Cas9 translation match ties the gold protein to LS483306.1. Exact training exposure and aggregate flanks make this diagnostic only."
+    },
+    {
+      "system_id": "tsp-h121-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Turicibacter sp.",
+      "host_strain": "H121",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/protein.faa",
+      "protein_record_id": "Tsp",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["NNAAACN"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "TspCas9 exact experimental protein.", "source_locator": "Supplementary Data 2, Cas9_database, Tsp"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for CP013476.1 and CAS-TypeIIC; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based forward orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/turicibacter-sp-tsp",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Tsp; exact translation also present in CP013476.1", "license": "CC-BY-4.0", "sha256": "be0f43868660313c56f6d44c2bad777df90f704267a001aa7a9571012819c909", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP013476.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "6ebad8a63361cd53b92dc975186c9e1ad5842be9cd54c816755af1e316aa1a48", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP013476.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "ed6992a39fae8a7dc9d9099bfb8b510c9c65acf33c08a4cdc8cdb29cf82d3b65", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "The experimental table records only Turicibacter sp.; exact Cas9 translation match ties the gold protein to strain H121. Exact training exposure prevents strict generalization claims."
+    },
+    {
+      "system_id": "nme2-de10444-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Neisseria meningitidis",
+      "host_strain": "DE10444",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/protein.faa",
+      "protein_record_id": "Nme2",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["NHDTCCA"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "Nme2Cas9 exact experimental protein.", "source_locator": "Supplementary Data 2, Cas9_database, Nme2"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for CP012392.1 and CAS-TypeIIC; hit=0 rows retained for coverage.", "orientation_policy": "Published PAM orientation is unavailable; use the CRISPRCasDB forward-orientation fallback.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/neisseria-meningitidis-nme2",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Nme2; exact translation also present in CP012392.1", "license": "CC-BY-4.0", "sha256": "73e5b4626f7c7b280f2f5abc15b510fcf633430f8efdb573fbe34cf3640ce706", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP012392.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "59528daafab0f26ed29b4b69d22ffb2cdb2c6db4f5ac8e606a0ccf31e8e3bb9a", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP012392.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "fda562f46bc895faeeee9658b03d9927187eec02e4e70c6d6b7d6cabfaa9004c", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact protein links the experimental system to DE10444, but all spacer orientations use the declared fallback. Training labels disagree in motif breadth; diagnostic only."
+    },
+    {
+      "system_id": "seq2-nctc11606-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-A",
+      "cas_family": "Cas9",
+      "host_taxon": "Streptococcus equi subsp. zooepidemicus",
+      "host_strain": "NCTC 11606",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/protein.faa",
+      "protein_record_id": "Seq2",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [3],
+      "gold_pam_spectrum": {"3": ["NGG"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "Seq2Cas9 exact experimental protein.", "source_locator": "Supplementary Data 2, Cas9_database, Seq2"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for LS483354.1 and CAS-TypeIIA; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based reverse orientation and normalize into spacer orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/streptococcus-equi-seq2",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Seq2; exact translation also present in LS483354.1", "license": "CC-BY-4.0", "sha256": "e150df01b4273c8ee83568d4dd9bd89de59e60519a8efa6ff1205509ac2d48b9", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; LS483354.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "511b895203684ebc9e5ff453bf04f41c51fcb227d18742478eeed51328cdbfb8", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; LS483354.1 Type II-A subset", "license": "CC-BY-4.0", "sha256": "a8e381426c260ac49e40e1393c2d37b1c480496acf08c6bf232d43d84ee15bb9", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Two genomes carried the exact experimental protein; NCTC11606 was preregistered because it had more effective spacer hits. Exact training exposure makes it retrospective."
+    },
+    {
+      "system_id": "psp-ct06-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Parabacteroides sp.",
+      "host_strain": "CT06",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/protein.faa",
+      "protein_record_id": "Psp",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [6],
+      "gold_pam_spectrum": {"6": ["NRTTTT"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "PspCas9 experimental protein; preference annotation A>G removed with the tested PAM normalizer.", "source_locator": "Supplementary Data 2, Cas9_database, Psp"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for CP022754.1 and CAS-TypeIIC; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based forward orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/parabacteroides-sp-psp",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Psp; exact translation also present in CP022754.1", "license": "CC-BY-4.0", "sha256": "c2f7cb5b21e24dc0244c60c7e7daf4a097078b9437ede5dd05ba81b694a2bb2e", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP022754.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "3e0c22e14fbc2ab6dc47ca2883740723634551e8c1851cd08d322ac54afbe734", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP022754.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "4c8c9828f073bcef8064b6dd2f2c79cf29bc50dfb6f5aaa12c414b855f717d71", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Exact Cas9 translation ties the strain-unspecified experimental entry to CT06. The training literature label is coarser than the experimental motif; diagnostic only."
+    },
+    {
+      "system_id": "wvi-dsm16922-published-flanks",
+      "evaluation_role": "retrospective_expansion_2026_09_25",
+      "tier": "retrospective_biological",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Weeksella virosa",
+      "host_strain": "DSM 16922",
+      "available_tracks": ["protein_only", "published_flanks"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/protein.faa",
+      "protein_record_id": "Wvi",
+      "spacer_fasta": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/spacers.fna",
+      "published_flanks_tsv": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/published_flanks.tsv",
+      "min_effective_spacers": 5,
+      "pam_side": "downstream",
+      "pam_lengths": [7],
+      "gold_pam_spectrum": {"7": ["HHAAATD"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s41467-020-19344-1",
+      "gold_assay": {"assay_type": "cell-free PAM library cleavage screen", "activity_values_available": true, "conditions": "WviCas9 exact experimental protein.", "source_locator": "Supplementary Data 2, Cas9_database, Wvi"},
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "exact",
+      "target_independence": "not_assessable_from_aggregate_flanks",
+      "published_flank_dataset": {"name": "CRISPRCasDB spacer consensus flanks", "doi": "10.1186/s13059-021-02495-9", "release": "PMC8482600 Additional file 2", "frozen_at": "2026-09-25", "row_selection_policy": "Rows for CP002455.1 and CAS-TypeIIC; hit=0 rows retained for coverage.", "orientation_policy": "Use the published PAM-based forward orientation.", "raw_target_identifiers_available": false},
+      "split_group": "retrospective/weeksella-virosa-wvi",
+      "provenance": {
+        "protein": {"source_name": "Gasiunas et al. Cas9 database", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7606464/", "source_version": "Supplementary Data 2; Wvi; exact translation also present in CP002455.1", "license": "CC-BY-4.0", "sha256": "962137bd7591834df80b86e259271fb3f942505ebaaf26c3ec7985fec92d369e", "sha256_scope": "selected protein sequence"},
+        "spacers": {"source_name": "Vink et al. CRISPRCasDB spacer table; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP002455.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "285cd474ea1c72145be455e7be48d75f9212f2715c68794f2baaca566db818b0", "sha256_scope": "derived_file_bytes"},
+        "published_flanks": {"source_name": "Vink et al. per-spacer consensus flanks; oriented row subset", "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482600/", "source_version": "Additional file 2; CP002455.1 Type II-C subset", "license": "CC-BY-4.0", "sha256": "b971c65e3f9259a3dd38a2a1e54d0344d4e7e662a0e6f9578a80b993d03eba23", "sha256_scope": "derived_file_bytes"}
+      },
+      "notes": "Two genomes carried the exact experimental protein; DSM 16922 was selected for more effective spacer hits. Exact training exposure and only eight hit rows make this diagnostic."
+    },
+    {
+      "system_id": "cj4-campylobacter-jejuni-414-protein-only",
+      "evaluation_role": "strict_protein_only_expansion_2026_09_25",
+      "tier": "strict_independent",
+      "status": "ready",
+      "crispr_type": "Type II-C",
+      "cas_family": "Cas9",
+      "host_taxon": "Campylobacter jejuni subsp. jejuni",
+      "host_strain": "414",
+      "available_tracks": ["protein_only"],
+      "protein_model": "cas9_full",
+      "protein_fasta": "benchmarks/multi_evidence_v2/systems/cj4-campylobacter-jejuni-414-protein-only/protein.faa",
+      "protein_record_id": "EFC33367.1",
+      "pam_side": "downstream",
+      "pam_lengths": [6],
+      "gold_pam_spectrum": {"6": ["NNNGRY"]},
+      "gold_evidence_type": "experimental_functional_spectrum",
+      "gold_doi": "10.1038/s42003-025-09430-9",
+      "gold_assay": {
+        "assay_type": "randomized 7-bp PAM-library GFP activation and deep sequencing",
+        "activity_values_available": true,
+        "conditions": "Exact wild-type Cj4Cas9 was profiled in HEK293T cells and subsequently validated at endogenous mammalian targets and in vivo.",
+        "source_locator": "Article Table 1 (EFC33367.1), Figure 2 (PAM profile), and Figures 3-5 (functional validation)"
+      },
+      "gold_system_match": "exact_protein_or_strain",
+      "protein_training_exposure": "none",
+      "target_independence": "not_applicable",
+      "split_group": "strict/campylobacter-jejuni-cj4",
+      "provenance": {
+        "protein": {
+          "source_name": "NCBI Protein",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/protein/EFC33367.1",
+          "source_version": "EFC33367.1; linked to Cj4Cas9 by article Table 1",
+          "license": "NCBI molecular data; no NCBI-imposed reuse restrictions (submitter rights may apply)",
+          "sha256": "68e74bdb27d8054a0e6da91db39dd18069939d0ca97d66dbf5afd558554df2cf",
+          "sha256_scope": "selected_fasta_record_sequence"
+        }
+      },
+      "notes": "First strict protein-only system in v2. No exact or >=90% full-length neighbor was found among 15,843 official Protein2PAM Cas9 training rows, and the exact sequence was absent from current project corpus TSVs. Sensitivity screening found a closest official-training neighbor at 0.89441624 identity, only 0.00558376 below the preregistered cutoff, so this is a boundary-independent rather than distant-OOD case. No natural spacer-target collection is registered, so this system is not paired-evidence eligible."
+    }
+  ]
+}

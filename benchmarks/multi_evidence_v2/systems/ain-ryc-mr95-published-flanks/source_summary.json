@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "system": {
+    "system_id": "ain-ryc-mr95-published-flanks",
+    "chromosome_accession": "CP003058.1",
+    "protein_record_id": "Ain",
+    "protein_sequence_source": "gasiunas_gold_master",
+    "protein_source_path": "data/corpus/gold_master.tsv",
+    "host_taxon": "Acidaminococcus intestini",
+    "host_strain": "RyC-MR95",
+    "crispr_type": "Type II-A",
+    "source_subtype": "CAS-TypeIIA",
+    "expected_spacer_rows": 52,
+    "expected_hit_rows": 27
+  },
+  "source": {
+    "doi": "10.1186/s13059-021-02495-9",
+    "table": "Additional file 2: 13059_2021_2495_MOESM2_ESM.csv",
+    "supplement_zip_sha256": "3a909e2f295e7dbd78d8f3ce39e3cef5260151a411edde4efca18bf625f53091",
+    "protein_source": "data/corpus/gold_master.tsv",
+    "protein_source_kind": "Gasiunas exact experimental protein",
+    "source_subtype_filter": "CAS-TypeIIA",
+    "flank_normalization": {
+      "published_sequence_length_nt": 26,
+      "external_flank_length_nt": 23,
+      "protospacer_boundary_overlap_removed_nt": 3
+    }
+  },
+  "counts": {
+    "spacer_rows": 52,
+    "published_flank_rows": 27,
+    "no_hit_rows": 25
+  },
+  "orientation_sources": {
+    "orientation_PAMbased": 52
+  },
+  "artifacts": {
+    "protein_faa_sha256": "32491720ae80ab14785502a935cb284a407a616ead34ca988bfbae6d25b82780",
+    "protein_sequence_sha256": "43717d44ced0ac18b548416372a62cf0a6373cff4712d992eecaa6d7cb3bb9b5",
+    "spacers_fna_sha256": "abad24318d526f5b88c3263cd40034b2708c90ad770cd7453029bcfcb85775f0",
+    "published_flanks_tsv_sha256": "3578cdd383f024c346d584c9fb26f13fcb62bb8eabe9d699a49cc4e868efe64e"
+  },
+  "limitations": [
+    "Published flanks are per-spacer aggregate consensus sequences.",
+    "Raw target contig identifiers and per-hit alignments are unavailable.",
+    "These records are retrospective evolutionary evidence, not cleavage assays."
+  ]
+}
