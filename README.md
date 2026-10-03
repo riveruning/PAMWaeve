@@ -15,8 +15,8 @@ Scores express model compatibility or sequence-evidence support. They are **not 
 Python 3.10 is the tested interpreter. CPU inference is supported; GPU inference has not been validated for this release.
 
 ```bash
-git clone https://github.com/riveruning/PAMWeave.git
-cd PAMWeave
+git clone https://github.com/riveruning/PAMWaeve.git
+cd PAMWaeve
 python3.10 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
