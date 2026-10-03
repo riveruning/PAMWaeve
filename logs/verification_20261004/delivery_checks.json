@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-03T16:52:22.257287+00:00",
+  "fresh_systems": 21,
+  "validated_input_artifacts": 57,
+  "candidate_rows": 20,
+  "reference_rows": 25,
+  "offline_tests": "168 passed, 0 failed",
+  "scientific_result_differences": 0,
+  "notebook_kernel_execution": true,
+  "failure_propagation_checked": true,
+  "weights_match_model_card": true,
+  "all_recorded_analysis_sources_match_delivered_files": true,
+  "scope": "local verification; not independent-machine acceptance or wet-lab validation"
+}

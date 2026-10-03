@@ -37,6 +37,17 @@ For real predictions, download the pinned model weights and upstream adapter fol
 bash run_all.sh
 ```
 
+To rerun inference in a separate output directory:
+
+```bash
+bash run_all.sh --fresh --outdir data/parsed/fresh_repro21
+```
+
+Every run saves actual stdout/stderr, exit codes, timing, environment versions,
+commands, source/output hashes and the bootstrap seed in `logs/runs/<UTC time>/`.
+See [data instructions](data/README.md) and [execution records](logs/README.md).
+Checked-in local verification logs are in `logs/verification_20261004/`.
+
 The default run evaluates the 21 redistributable systems and generates `results/results_repro21.csv` (20 candidate rows from four showcase systems). The supplied `results/results.csv` contains 25 rows from the full 22-system reference evaluation. Reproducing its additional SpCas9 case requires separately obtaining the omitted inputs; the guide explains the distinction. Existing artifacts are reused by `run_all.sh`; use the explicit evaluation command in the guide for a fresh run in a new output directory.
 
 ## Documentation
@@ -48,6 +59,16 @@ The default run evaluates the 21 redistributable systems and generates `results/
 - [Case selection](docs/CASE_SELECTION.md)
 - [Data and software attribution](docs/THIRD_PARTY.md)
 - [Original submission verification record](docs/SUBMISSION.md)
+- [Delivery materials update](docs/MATERIALS_UPDATE_20261004.md)
+- [Executable reproduction Notebook](notebooks/01_reproduce_candidates.ipynb)
+
+The directory layout follows the competition's functional requirements. Data is
+distributed under `benchmarks/`, with `data/README.md` explaining its location.
+`run_all.sh` is the equivalent main prediction/screening entry; filenames such as
+`predict.py` are not mandatory. The final results use pretrained weights, with
+historical, unused fine-tuning experiments disclosed in the Model Card. No new
+training is needed to reproduce them. An executable Notebook is also provided
+to walk through the same entry and check the candidate list.
 
 The original evaluation used 22 systems; three qualify for strict protein-only evaluation, while none qualify for strict paired-evidence evaluation. Training-exposed and retrospective examples are reported separately from independent samples. See the analysis for cohort sizes, denominators and abstention handling.
 

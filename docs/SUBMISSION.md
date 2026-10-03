@@ -2,6 +2,11 @@
 
 状态日期：**2026-10-03**
 
+**2026-10-04 材料补充**：新增数据入口说明与真实运行日志收集入口；
+公开仓库和参赛压缩包使用同一份文件集。此次新验证的命令、耗时、结果
+见 [MATERIALS_UPDATE_20261004.md](MATERIALS_UPDATE_20261004.md)
+与 `logs/verification_20261004/`。以下第 3 节保留 2026-10-03 的历史记录。
+
 ## 1. 这个包是什么
 
 对应**附件 5《代码提交要求》**的代码提交包，赛道为
@@ -26,6 +31,10 @@
 | 模型说明 | `models/MODEL_CARD.md` |
 | 说明文档 | `docs/{EVALUATION_PROTOCOL,RESULTS_ANALYSIS,CASE_SELECTION,THIRD_PARTY,SUBMISSION}.md` |
 | 一键复跑 | `run_all.sh`（默认 21 系统可再分发清单） |
+| 执行记录入口 | `scripts/run_submission.py`，自动记录命令、真实输出、参数、种子和耗时 |
+| 数据入口说明 | `data/README.md`，映射到 `benchmarks/` 中实际分发的输入 |
+| 本地验证日志 | `logs/verification_20261004/`，每个阶段的真实输出、退出码及运行元数据 |
+| 可执行 Notebook | `notebooks/01_reproduce_candidates.ipynb`，与主入口共用分析代码，附真实执行输出 |
 
 ### 明确排除了什么
 
@@ -164,7 +173,7 @@ grep -rIln "/home/<dev-user>" .
 |---|---|
 | 路径 | `deliverables/PAMPRIDICT_code_submission.zip` |
 | 顶层目录 | `PAMPRIDICT_submission/` |
-| 文件数 | 247 |
+| 历史文件数 | 历史表中的 247 包括目录条目；实际历史文件为 217 个。新版以交付检查记录为准 |
 | 大小 | 约 0.5 MB |
 
 打包命令：

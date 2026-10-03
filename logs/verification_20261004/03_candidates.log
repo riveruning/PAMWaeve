@@ -1,0 +1,43 @@
+Started UTC: 2026-10-03T16:24:13.112101+00:00
+Command: <PYTHON> scripts/build_competition_results.py --benchmark-dir data/parsed/verification_repro21_20261004 --manifest benchmarks/multi_evidence_v2/manifest_redistributable21.json --display-candidates results/display_candidates.json --top-n 5 --systems sp7f7-published-flanks,cj4-campylobacter-jejuni-414-protein-only,asp-acidiphilium-21-60-14-protein-only,cba-caulobacterales-protein-only --out results/results_repro21.csv
+{
+  "rows": 20,
+  "systems_with_rows": 4,
+  "systems_skipped": [],
+  "display_subset": true,
+  "source_counts": {
+    "raw_spacer_target_match": 0,
+    "published_aggregate_flank": 5,
+    "": 15
+  },
+  "benchmark_manifest_sha256": "8e86eae66f6b2f41903153e6d932202169c7642346812cfa6e7e0a3c79273b48",
+  "benchmark_generated_at": "2026-10-03T16:24:13.040697+00:00",
+  "decision": "FRAMEWORK_VALIDATED_NO_STRICT_COHORT",
+  "code_version": "44cf9b35cd6b75503c3c6ec1ea88d718fd3e533a+src.6f3d90da486c",
+  "code_version_source": "git HEAD of this tree, plus SHA-256 over analysis sources",
+  "code_source_sha256": "6f3d90da486cb107c8a29d6e6c4522f93b64856f24b4b948590c6c9b2ba15991",
+  "code_identity_files": [
+    "scripts/build_competition_results.py",
+    "scripts/fuse_pam_evidence.py",
+    "scripts/run_multi_evidence_benchmark.py",
+    "scripts/score_candidate_pams.py",
+    "scripts/score_published_flanks.py",
+    "scripts/score_spacer_pams.py",
+    "src/pamdict/benchmark/multi_evidence.py",
+    "src/pamdict/infer/p2pam.py",
+    "src/pamdict/score/candidate.py",
+    "src/pamdict/score/fusion.py",
+    "src/pamdict/score/spacer.py"
+  ],
+  "field_notes": {
+    "competition_track": "competition track this work is submitted to; distinct from 'track', which is the internal evidence-type label",
+    "track": "evidence type (protein_only / paired_evidence / published_flanks), NOT the competition track",
+    "protein_compatibility_score": "protein-side model compatibility; NOT cleavage activity, editing efficiency, or a success probability",
+    "evidence_status": "categorical evidence state; no calibrated combined score exists",
+    "missing_values": "unavailable values are empty cells, never 0"
+  }
+}
+wrote 20 rows -> <PACKAGE_ROOT>/results/results_repro21.csv
+
+Exit code: 0
+Elapsed seconds: 0.291

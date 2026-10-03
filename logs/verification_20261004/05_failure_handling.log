@@ -1,0 +1,869 @@
+Purpose: intentionally missing upstream adapter; verify failure is logged and candidate export is not run.
+==> 01_validate: <PYTHON> scripts/validate_benchmark_manifest.py --manifest benchmarks/multi_evidence_v2/manifest_redistributable21.json --check-files
+{
+  "valid": true,
+  "format_version": 2,
+  "benchmark_name": "PAMPRIDICT multi-evidence benchmark v2 - redistributable subset (21 systems; SpCas9 paired-evidence control omitted because its PAMpredict inputs are CC-BY-NC-ND-4.0 and are not redistributed)",
+  "system_count": 21,
+  "track_counts": {
+    "protein_only": 21,
+    "published_flanks": 18
+  },
+  "strict_independent_track_counts": {
+    "protein_only": 3
+  },
+  "errors": [],
+  "warnings": [
+    "strict paired-evidence cohort is below minimum_strict_systems"
+  ],
+  "system_audits": [
+    {
+      "system_id": "sp7f7-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "nme-m22809-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "cj-nctc11168-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "tde-atcc35405-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "sgo-challis-ch1-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "sth1a-lmg18311-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "ain-ryc-mr95-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "ssa-jim8777-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "sga-atcc43143-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "smu-gs5-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "sdy-ac2713-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "sag2-nem316-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "ece-nctc12421-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "tsp-h121-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "nme2-de10444-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "seq2-nctc11606-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "psp-ct06-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "wvi-dsm16922-published-flanks",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only",
+        "published_flanks"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": false,
+      "strict_independent_eligible_tracks": [],
+      "errors": [],
+      "warnings": [
+        "protein is exposed to Protein2PAM training distribution",
+        "published flanks are aggregate per-spacer evidence without raw target identifiers"
+      ]
+    },
+    {
+      "system_id": "cj4-campylobacter-jejuni-414-protein-only",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": true,
+      "strict_independent_eligible_tracks": [
+        "protein_only"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "system_id": "asp-acidiphilium-21-60-14-protein-only",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": true,
+      "strict_independent_eligible_tracks": [
+        "protein_only"
+      ],
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "system_id": "cba-caulobacterales-protein-only",
+      "format_version": 2,
+      "available_tracks": [
+        "protein_only"
+      ],
+      "valid": true,
+      "runnable": true,
+      "strict_independent_eligible": true,
+      "strict_independent_eligible_tracks": [
+        "protein_only"
+      ],
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "strict_paired_requirement_met": false,
+  "file_verification": {
+    "valid": true,
+    "checked_artifacts": 57,
+    "failed_artifacts": 0,
+    "checks": [
+      {
+        "system_id": "sp7f7-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "a0d235d74c44a0c7f9e6b81d5dfa984c2b32770ccebb8931af83b2cc62eddb16",
+        "observed_sha256": "a0d235d74c44a0c7f9e6b81d5dfa984c2b32770ccebb8931af83b2cc62eddb16"
+      },
+      {
+        "system_id": "sp7f7-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329",
+        "observed_sha256": "32e2c7996b27deeec666e6f13b5ba8131429de414c94fcb1ef304e75f8a15329"
+      },
+      {
+        "system_id": "sp7f7-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076",
+        "observed_sha256": "a4c8f117a56d00bbc2db29639793386a84dc0b414c8efb3e7136a8a0b4a27076"
+      },
+      {
+        "system_id": "nme-m22809-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "77166d1d9da31cbbd65273d784849e22a0be6f7328cd9b417e1adf44c63e1c6b",
+        "observed_sha256": "77166d1d9da31cbbd65273d784849e22a0be6f7328cd9b417e1adf44c63e1c6b"
+      },
+      {
+        "system_id": "nme-m22809-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "8208d16cd4697ee3c90a1778e24c0ba8eaafb30d36afe066e5a37e2004d25b6d",
+        "observed_sha256": "8208d16cd4697ee3c90a1778e24c0ba8eaafb30d36afe066e5a37e2004d25b6d"
+      },
+      {
+        "system_id": "nme-m22809-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "08ab00c472a9671eac09e50d4c740ab734181ded4b24ceda7866f388654624ba",
+        "observed_sha256": "08ab00c472a9671eac09e50d4c740ab734181ded4b24ceda7866f388654624ba"
+      },
+      {
+        "system_id": "cj-nctc11168-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "47d46d3653037f9076264916e81192682e1d178885b9c75d6b9af2cd84734369",
+        "observed_sha256": "47d46d3653037f9076264916e81192682e1d178885b9c75d6b9af2cd84734369"
+      },
+      {
+        "system_id": "cj-nctc11168-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "72429a8b920e8e7872d9119d90b9aadc69534e060652388c2f9a2cfa1dc597b3",
+        "observed_sha256": "72429a8b920e8e7872d9119d90b9aadc69534e060652388c2f9a2cfa1dc597b3"
+      },
+      {
+        "system_id": "cj-nctc11168-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "620a289fab96c509776c3f372549e4c76df32b62cdc4eedf9da7ad555d6afff9",
+        "observed_sha256": "620a289fab96c509776c3f372549e4c76df32b62cdc4eedf9da7ad555d6afff9"
+      },
+      {
+        "system_id": "tde-atcc35405-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "a16cf6788a6dca8a92d07b7c23ad23cd3ee4fccbba55ff2f939d59c84edd5dcd",
+        "observed_sha256": "a16cf6788a6dca8a92d07b7c23ad23cd3ee4fccbba55ff2f939d59c84edd5dcd"
+      },
+      {
+        "system_id": "tde-atcc35405-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "93e369f9897f7aa0c7de46ba45c9d28785c6206bc0ac82258d863ba3a5036f7c",
+        "observed_sha256": "93e369f9897f7aa0c7de46ba45c9d28785c6206bc0ac82258d863ba3a5036f7c"
+      },
+      {
+        "system_id": "tde-atcc35405-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "731539342dc8ec76dbf6620468bc69d926eebcf8c2b4dfea2fc29940bcfa775e",
+        "observed_sha256": "731539342dc8ec76dbf6620468bc69d926eebcf8c2b4dfea2fc29940bcfa775e"
+      },
+      {
+        "system_id": "sgo-challis-ch1-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "a853688e03f32cb7d2d25914110ff0aa67f9d91c6338cb9b9b1ca288b6f84fb2",
+        "observed_sha256": "a853688e03f32cb7d2d25914110ff0aa67f9d91c6338cb9b9b1ca288b6f84fb2"
+      },
+      {
+        "system_id": "sgo-challis-ch1-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "c0206dd13eca9702e5d6abd435dd93a445a02b98de2ca43af6be5addd918b77b",
+        "observed_sha256": "c0206dd13eca9702e5d6abd435dd93a445a02b98de2ca43af6be5addd918b77b"
+      },
+      {
+        "system_id": "sgo-challis-ch1-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "9688e25d5b549f4d582e5b9d91a526d473f9e1c75cccdc6aeb075cca7c2acd32",
+        "observed_sha256": "9688e25d5b549f4d582e5b9d91a526d473f9e1c75cccdc6aeb075cca7c2acd32"
+      },
+      {
+        "system_id": "sth1a-lmg18311-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "f7263a92f476a88fcd2999f5f645c7eec121bad46093967f6ab83bcbf804dc8f",
+        "observed_sha256": "f7263a92f476a88fcd2999f5f645c7eec121bad46093967f6ab83bcbf804dc8f"
+      },
+      {
+        "system_id": "sth1a-lmg18311-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "ed65497162a106730527a8b35dba244bab0156e39eb568898401f80037cd54d2",
+        "observed_sha256": "ed65497162a106730527a8b35dba244bab0156e39eb568898401f80037cd54d2"
+      },
+      {
+        "system_id": "sth1a-lmg18311-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "2fc6dce20670f1d80708c51b48018286037ae6dca84686dde92f6657e20157fd",
+        "observed_sha256": "2fc6dce20670f1d80708c51b48018286037ae6dca84686dde92f6657e20157fd"
+      },
+      {
+        "system_id": "ain-ryc-mr95-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "43717d44ced0ac18b548416372a62cf0a6373cff4712d992eecaa6d7cb3bb9b5",
+        "observed_sha256": "43717d44ced0ac18b548416372a62cf0a6373cff4712d992eecaa6d7cb3bb9b5"
+      },
+      {
+        "system_id": "ain-ryc-mr95-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "abad24318d526f5b88c3263cd40034b2708c90ad770cd7453029bcfcb85775f0",
+        "observed_sha256": "abad24318d526f5b88c3263cd40034b2708c90ad770cd7453029bcfcb85775f0"
+      },
+      {
+        "system_id": "ain-ryc-mr95-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "3578cdd383f024c346d584c9fb26f13fcb62bb8eabe9d699a49cc4e868efe64e",
+        "observed_sha256": "3578cdd383f024c346d584c9fb26f13fcb62bb8eabe9d699a49cc4e868efe64e"
+      },
+      {
+        "system_id": "ssa-jim8777-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "2a24a5d691d595d29b86d0a9cf4af55d22933bcdfd63fb0c13b927eba5fe23ff",
+        "observed_sha256": "2a24a5d691d595d29b86d0a9cf4af55d22933bcdfd63fb0c13b927eba5fe23ff"
+      },
+      {
+        "system_id": "ssa-jim8777-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "48c1d2236bfbf85fbd67e0a8051c8805a4d6c9b26b25ac62d5955444373367eb",
+        "observed_sha256": "48c1d2236bfbf85fbd67e0a8051c8805a4d6c9b26b25ac62d5955444373367eb"
+      },
+      {
+        "system_id": "ssa-jim8777-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "daf3325cba2386b5bc9713dec856de90328f0e57a8488b34efd6cd305ba41618",
+        "observed_sha256": "daf3325cba2386b5bc9713dec856de90328f0e57a8488b34efd6cd305ba41618"
+      },
+      {
+        "system_id": "sga-atcc43143-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "288587c9c8275c3c62c6384a1936c1970a5441a61cc8ee1e826eca4e2fd571f0",
+        "observed_sha256": "288587c9c8275c3c62c6384a1936c1970a5441a61cc8ee1e826eca4e2fd571f0"
+      },
+      {
+        "system_id": "sga-atcc43143-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "53c110d9faae31719871f3e1efddfde206082b42861187099821340079d1cd03",
+        "observed_sha256": "53c110d9faae31719871f3e1efddfde206082b42861187099821340079d1cd03"
+      },
+      {
+        "system_id": "sga-atcc43143-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "87cb093e1ee797c44b403a664db733507993221ca8c7faeb9c5b4f6b236f1285",
+        "observed_sha256": "87cb093e1ee797c44b403a664db733507993221ca8c7faeb9c5b4f6b236f1285"
+      },
+      {
+        "system_id": "smu-gs5-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "015684f1a67bb02c3f759f99ab1822b2ef811b260bff2b93cfb8e43344000626",
+        "observed_sha256": "015684f1a67bb02c3f759f99ab1822b2ef811b260bff2b93cfb8e43344000626"
+      },
+      {
+        "system_id": "smu-gs5-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "5cb5cb20693e00e31b0748329f902c431b7244e67ecadcdbc4b74e112a4b7476",
+        "observed_sha256": "5cb5cb20693e00e31b0748329f902c431b7244e67ecadcdbc4b74e112a4b7476"
+      },
+      {
+        "system_id": "smu-gs5-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "d94689b2de96ae38d2c008b3a83958d0a6345d997ca422f5bc3783ce82057e96",
+        "observed_sha256": "d94689b2de96ae38d2c008b3a83958d0a6345d997ca422f5bc3783ce82057e96"
+      },
+      {
+        "system_id": "sdy-ac2713-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "2b476818e1648b6e158da808692b408c8a8d32f227ebeeb6f0f942f6ffff8f7b",
+        "observed_sha256": "2b476818e1648b6e158da808692b408c8a8d32f227ebeeb6f0f942f6ffff8f7b"
+      },
+      {
+        "system_id": "sdy-ac2713-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "65673b4b56debb0666b3dd88d47b3554aae094423b033de51cde77d207e43909",
+        "observed_sha256": "65673b4b56debb0666b3dd88d47b3554aae094423b033de51cde77d207e43909"
+      },
+      {
+        "system_id": "sdy-ac2713-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "02020cb82b82e93f1b81de24c4aae4eb15fe1622863b355904bb8f2eabcb375b",
+        "observed_sha256": "02020cb82b82e93f1b81de24c4aae4eb15fe1622863b355904bb8f2eabcb375b"
+      },
+      {
+        "system_id": "sag2-nem316-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "7b669277d9fb5380d4602fc7df95a677e1b00c01c5cd89ac5ee2c990d5624b1e",
+        "observed_sha256": "7b669277d9fb5380d4602fc7df95a677e1b00c01c5cd89ac5ee2c990d5624b1e"
+      },
+      {
+        "system_id": "sag2-nem316-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "3fc600f1421858abb952a0eae17251e30680ffc82915f50d512c0bb7c20001f1",
+        "observed_sha256": "3fc600f1421858abb952a0eae17251e30680ffc82915f50d512c0bb7c20001f1"
+      },
+      {
+        "system_id": "sag2-nem316-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "7e80bc595b195aa9df203befc940fabc6a7b0eedf8f81e3378d4a4d206fb8dd4",
+        "observed_sha256": "7e80bc595b195aa9df203befc940fabc6a7b0eedf8f81e3378d4a4d206fb8dd4"
+      },
+      {
+        "system_id": "ece-nctc12421-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "afcaed43f644527577f1b5939d5183de1b1aacc4b75d97b60206b3e8d4a283b1",
+        "observed_sha256": "afcaed43f644527577f1b5939d5183de1b1aacc4b75d97b60206b3e8d4a283b1"
+      },
+      {
+        "system_id": "ece-nctc12421-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "7147c05d799e464daf12be4ddb7e9027f0e8b72bfee31d589eee9c09f8655120",
+        "observed_sha256": "7147c05d799e464daf12be4ddb7e9027f0e8b72bfee31d589eee9c09f8655120"
+      },
+      {
+        "system_id": "ece-nctc12421-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "515e7f6856d6ac9a25db4f91cb28401196f3fd0f476fc9497e64917996ce2d65",
+        "observed_sha256": "515e7f6856d6ac9a25db4f91cb28401196f3fd0f476fc9497e64917996ce2d65"
+      },
+      {
+        "system_id": "tsp-h121-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "be0f43868660313c56f6d44c2bad777df90f704267a001aa7a9571012819c909",
+        "observed_sha256": "be0f43868660313c56f6d44c2bad777df90f704267a001aa7a9571012819c909"
+      },
+      {
+        "system_id": "tsp-h121-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "6ebad8a63361cd53b92dc975186c9e1ad5842be9cd54c816755af1e316aa1a48",
+        "observed_sha256": "6ebad8a63361cd53b92dc975186c9e1ad5842be9cd54c816755af1e316aa1a48"
+      },
+      {
+        "system_id": "tsp-h121-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "ed6992a39fae8a7dc9d9099bfb8b510c9c65acf33c08a4cdc8cdb29cf82d3b65",
+        "observed_sha256": "ed6992a39fae8a7dc9d9099bfb8b510c9c65acf33c08a4cdc8cdb29cf82d3b65"
+      },
+      {
+        "system_id": "nme2-de10444-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "73e5b4626f7c7b280f2f5abc15b510fcf633430f8efdb573fbe34cf3640ce706",
+        "observed_sha256": "73e5b4626f7c7b280f2f5abc15b510fcf633430f8efdb573fbe34cf3640ce706"
+      },
+      {
+        "system_id": "nme2-de10444-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "59528daafab0f26ed29b4b69d22ffb2cdb2c6db4f5ac8e606a0ccf31e8e3bb9a",
+        "observed_sha256": "59528daafab0f26ed29b4b69d22ffb2cdb2c6db4f5ac8e606a0ccf31e8e3bb9a"
+      },
+      {
+        "system_id": "nme2-de10444-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "fda562f46bc895faeeee9658b03d9927187eec02e4e70c6d6b7d6cabfaa9004c",
+        "observed_sha256": "fda562f46bc895faeeee9658b03d9927187eec02e4e70c6d6b7d6cabfaa9004c"
+      },
+      {
+        "system_id": "seq2-nctc11606-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "e150df01b4273c8ee83568d4dd9bd89de59e60519a8efa6ff1205509ac2d48b9",
+        "observed_sha256": "e150df01b4273c8ee83568d4dd9bd89de59e60519a8efa6ff1205509ac2d48b9"
+      },
+      {
+        "system_id": "seq2-nctc11606-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "511b895203684ebc9e5ff453bf04f41c51fcb227d18742478eeed51328cdbfb8",
+        "observed_sha256": "511b895203684ebc9e5ff453bf04f41c51fcb227d18742478eeed51328cdbfb8"
+      },
+      {
+        "system_id": "seq2-nctc11606-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "a8e381426c260ac49e40e1393c2d37b1c480496acf08c6bf232d43d84ee15bb9",
+        "observed_sha256": "a8e381426c260ac49e40e1393c2d37b1c480496acf08c6bf232d43d84ee15bb9"
+      },
+      {
+        "system_id": "psp-ct06-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "c2f7cb5b21e24dc0244c60c7e7daf4a097078b9437ede5dd05ba81b694a2bb2e",
+        "observed_sha256": "c2f7cb5b21e24dc0244c60c7e7daf4a097078b9437ede5dd05ba81b694a2bb2e"
+      },
+      {
+        "system_id": "psp-ct06-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "3e0c22e14fbc2ab6dc47ca2883740723634551e8c1851cd08d322ac54afbe734",
+        "observed_sha256": "3e0c22e14fbc2ab6dc47ca2883740723634551e8c1851cd08d322ac54afbe734"
+      },
+      {
+        "system_id": "psp-ct06-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "4c8c9828f073bcef8064b6dd2f2c79cf29bc50dfb6f5aaa12c414b855f717d71",
+        "observed_sha256": "4c8c9828f073bcef8064b6dd2f2c79cf29bc50dfb6f5aaa12c414b855f717d71"
+      },
+      {
+        "system_id": "wvi-dsm16922-published-flanks",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/protein.faa",
+        "valid": true,
+        "expected_sha256": "962137bd7591834df80b86e259271fb3f942505ebaaf26c3ec7985fec92d369e",
+        "observed_sha256": "962137bd7591834df80b86e259271fb3f942505ebaaf26c3ec7985fec92d369e"
+      },
+      {
+        "system_id": "wvi-dsm16922-published-flanks",
+        "role": "spacers",
+        "path": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/spacers.fna",
+        "valid": true,
+        "expected_sha256": "285cd474ea1c72145be455e7be48d75f9212f2715c68794f2baaca566db818b0",
+        "observed_sha256": "285cd474ea1c72145be455e7be48d75f9212f2715c68794f2baaca566db818b0"
+      },
+      {
+        "system_id": "wvi-dsm16922-published-flanks",
+        "role": "published_flanks",
+        "path": "benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/published_flanks.tsv",
+        "valid": true,
+        "expected_sha256": "b971c65e3f9259a3dd38a2a1e54d0344d4e7e662a0e6f9578a80b993d03eba23",
+        "observed_sha256": "b971c65e3f9259a3dd38a2a1e54d0344d4e7e662a0e6f9578a80b993d03eba23"
+      },
+      {
+        "system_id": "cj4-campylobacter-jejuni-414-protein-only",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/cj4-campylobacter-jejuni-414-protein-only/protein.faa",
+        "valid": true,
+        "expected_sha256": "68e74bdb27d8054a0e6da91db39dd18069939d0ca97d66dbf5afd558554df2cf",
+        "observed_sha256": "68e74bdb27d8054a0e6da91db39dd18069939d0ca97d66dbf5afd558554df2cf"
+      },
+      {
+        "system_id": "asp-acidiphilium-21-60-14-protein-only",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/asp-acidiphilium-21-60-14-protein-only/protein.faa",
+        "valid": true,
+        "expected_sha256": "7fe9c85f2cd4f8e583cc70ea2e375b1975d149a810ab29b5c4806c6fb38c2d1a",
+        "observed_sha256": "7fe9c85f2cd4f8e583cc70ea2e375b1975d149a810ab29b5c4806c6fb38c2d1a"
+      },
+      {
+        "system_id": "cba-caulobacterales-protein-only",
+        "role": "protein",
+        "path": "benchmarks/multi_evidence_v2/systems/cba-caulobacterales-protein-only/protein.faa",
+        "valid": true,
+        "expected_sha256": "540e89ebe0203ab5bfe1ad14786b68bad0ec93d8a8960a1bebf2f6f9acf47ecb",
+        "observed_sha256": "540e89ebe0203ab5bfe1ad14786b68bad0ec93d8a8960a1bebf2f6f9acf47ecb"
+      }
+    ]
+  }
+}
+==> 02_benchmark: <PYTHON> -u scripts/run_multi_evidence_benchmark.py --manifest benchmarks/multi_evidence_v2/manifest_redistributable21.json --device cpu --fusion-policy abstain --bootstrap 2000 --outdir data/parsed/failure_test
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein_scores.json
+Traceback (most recent call last):
+  File "<PACKAGE_ROOT>/scripts/score_candidate_pams.py", line 417, in <module>
+    raise SystemExit(main())
+  File "<PACKAGE_ROOT>/scripts/score_candidate_pams.py", line 201, in main
+    predictor = P2PAMPredictor(args.model, device="cpu", local_files_only=True)
+  File "<PACKAGE_ROOT>/src/pamdict/infer/p2pam.py", line 209, in __init__
+    EsmCls, _ = _load_official_model_cls()
+  File "<PACKAGE_ROOT>/src/pamdict/infer/p2pam.py", line 144, in _load_official_model_cls
+    cfg = _load(
+  File "<PACKAGE_ROOT>/src/pamdict/infer/p2pam.py", line 141, in _load
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '<UPSTREAM_ADAPTER>/configuration_esm.py'
+Traceback (most recent call last):
+  File "<PACKAGE_ROOT>/scripts/run_multi_evidence_benchmark.py", line 936, in <module>
+    raise SystemExit(main())
+  File "<PACKAGE_ROOT>/scripts/run_multi_evidence_benchmark.py", line 563, in main
+    run_command(command, environment)
+  File "<PACKAGE_ROOT>/scripts/run_multi_evidence_benchmark.py", line 167, in run_command
+    subprocess.run(
+  File "<PYTHON_ENV>/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['<PYTHON>', 'scripts/score_candidate_pams.py', '--protein', '<PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein.fasta', '--candidates-file', '<PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/candidate_pams.txt', '--model', 'cas9_full', '--device', 'cpu', '--out', '<PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein_scores.tsv', '--json-out', '<PACKAGE_ROOT>/data/parsed/failure_test/sp7f7-published-flanks/protein_scores.json']' returned non-zero exit status 1.
+Candidate list: results/results_repro21.csv
+Execution record: logs/failure_test
+Exit code: 1
+
+Observed subprocess exit code: 1
+Failure-handling assertions: PASS

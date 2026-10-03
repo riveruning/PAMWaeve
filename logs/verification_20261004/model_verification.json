@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-03T16:25:09.623951+00:00",
+  "model": "Profluent-Bio/protein2pam-cas9_full",
+  "observed_snapshot_revision": "407f7fc32146a4c0db13c05284f9f3a7cf0ff612",
+  "files": {
+    "model.safetensors": {
+      "observed_sha256": "aa1dc5c017ddd885bf26c8126675075af0007d1af3ab1a2893e62aaffe0341c2",
+      "expected_sha256": "aa1dc5c017ddd885bf26c8126675075af0007d1af3ab1a2893e62aaffe0341c2",
+      "matches": true,
+      "bytes": 2616251540
+    },
+    "config.json": {
+      "observed_sha256": "7fe91bd35342572b6dcd23f937013ec2603b2e136970f4e3a21a9af5b5c41cb5",
+      "expected_sha256": "7fe91bd35342572b6dcd23f937013ec2603b2e136970f4e3a21a9af5b5c41cb5",
+      "matches": true,
+      "bytes": 1079
+    }
+  }
+}

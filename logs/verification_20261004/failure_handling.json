@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-03T16:25:11.386345+00:00",
+  "test": "missing_adapter_failure_propagation",
+  "passed": true,
+  "expected": "nonzero process exit, failed record, no candidate export",
+  "observed_exit_code": 1,
+  "stages": [
+    {
+      "name": "01_validate",
+      "exit_code": 0
+    },
+    {
+      "name": "02_benchmark",
+      "exit_code": 1
+    }
+  ],
+  "seconds": 2.751,
+  "log_path_redaction": "absolute package, external Python path, temporary test and Python environment prefixes replaced; outputs and exit codes retained"
+}

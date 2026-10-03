@@ -7,6 +7,9 @@ __pycache__/
 .env
 .env.*
 !.env.example
-data/
+data/*
+!data/README.md
+logs/runs/
 *.log
+!logs/verification_20261004/*.log
 .DS_Store

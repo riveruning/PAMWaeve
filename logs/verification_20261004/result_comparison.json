@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-03T16:31:58.179244+00:00",
+  "fresh_systems": 21,
+  "reference_systems": 22,
+  "compared_candidate_rows": 20,
+  "ignored_version_fields": [
+    "code_version",
+    "code_version_source"
+  ],
+  "metric_differences": [],
+  "candidate_field_differences": [],
+  "passed": true
+}

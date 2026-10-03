@@ -1,0 +1,332 @@
+Started UTC: 2026-10-03T16:19:50.676735+00:00
+Command: <PYTHON> -u scripts/run_multi_evidence_benchmark.py --manifest benchmarks/multi_evidence_v2/manifest_redistributable21.json --device cpu --fusion-policy abstain --bootstrap 2000 --outdir data/parsed/verification_repro21_20261004
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sp7f7-published-flanks/published_flanks.tsv --system-id sp7f7-published-flanks --pam-side downstream --pam-length 3 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/candidate_pams_len3.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/spacer_len3
+{
+  "system_id": "sp7f7-published-flanks",
+  "input_spacers": 8,
+  "published_flank_records": 7,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/spacer_len3"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/spacer_scores.tsv --system-id sp7f7-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/fusion_scores.tsv
+wrote 64 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sp7f7-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/nme-m22809-published-flanks/published_flanks.tsv --system-id nme-m22809-published-flanks --pam-side downstream --pam-length 8 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/candidate_pams_len8.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/spacer_len8
+{
+  "system_id": "nme-m22809-published-flanks",
+  "input_spacers": 25,
+  "published_flank_records": 11,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/spacer_len8"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/spacer_scores.tsv --system-id nme-m22809-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/fusion_scores.tsv
+wrote 65536 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme-m22809-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/cj-nctc11168-published-flanks/published_flanks.tsv --system-id cj-nctc11168-published-flanks --pam-side downstream --pam-length 8 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/candidate_pams_len8.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/spacer_len8
+{
+  "system_id": "cj-nctc11168-published-flanks",
+  "input_spacers": 4,
+  "published_flank_records": 2,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": false,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/spacer_len8"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/spacer_scores.tsv --system-id cj-nctc11168-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/fusion_scores.tsv
+wrote 65536 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj-nctc11168-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/tde-atcc35405-published-flanks/published_flanks.tsv --system-id tde-atcc35405-published-flanks --pam-side downstream --pam-length 6 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/candidate_pams_len6.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/spacer_len6
+{
+  "system_id": "tde-atcc35405-published-flanks",
+  "input_spacers": 53,
+  "published_flank_records": 31,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/spacer_len6"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/spacer_scores.tsv --system-id tde-atcc35405-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/fusion_scores.tsv
+wrote 4096 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tde-atcc35405-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sgo-challis-ch1-published-flanks/published_flanks.tsv --system-id sgo-challis-ch1-published-flanks --pam-side downstream --pam-length 6 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/candidate_pams_len6.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/spacer_len6
+{
+  "system_id": "sgo-challis-ch1-published-flanks",
+  "input_spacers": 26,
+  "published_flank_records": 25,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/spacer_len6"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/spacer_scores.tsv --system-id sgo-challis-ch1-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/fusion_scores.tsv
+wrote 4096 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sgo-challis-ch1-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sth1a-lmg18311-published-flanks/published_flanks.tsv --system-id sth1a-lmg18311-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/spacer_len7
+{
+  "system_id": "sth1a-lmg18311-published-flanks",
+  "input_spacers": 33,
+  "published_flank_records": 23,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/spacer_scores.tsv --system-id sth1a-lmg18311-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sth1a-lmg18311-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ain-ryc-mr95-published-flanks/published_flanks.tsv --system-id ain-ryc-mr95-published-flanks --pam-side downstream --pam-length 5 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/candidate_pams_len5.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/spacer_len5
+{
+  "system_id": "ain-ryc-mr95-published-flanks",
+  "input_spacers": 52,
+  "published_flank_records": 27,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/spacer_len5"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/spacer_scores.tsv --system-id ain-ryc-mr95-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/fusion_scores.tsv
+wrote 1024 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ain-ryc-mr95-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ssa-jim8777-published-flanks/published_flanks.tsv --system-id ssa-jim8777-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/spacer_len7
+{
+  "system_id": "ssa-jim8777-published-flanks",
+  "input_spacers": 25,
+  "published_flank_records": 25,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/spacer_scores.tsv --system-id ssa-jim8777-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ssa-jim8777-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sga-atcc43143-published-flanks/published_flanks.tsv --system-id sga-atcc43143-published-flanks --pam-side downstream --pam-length 5 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/candidate_pams_len5.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/spacer_len5
+{
+  "system_id": "sga-atcc43143-published-flanks",
+  "input_spacers": 37,
+  "published_flank_records": 23,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/spacer_len5"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/spacer_scores.tsv --system-id sga-atcc43143-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/fusion_scores.tsv
+wrote 1024 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sga-atcc43143-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/smu-gs5-published-flanks/published_flanks.tsv --system-id smu-gs5-published-flanks --pam-side downstream --pam-length 5 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/candidate_pams_len5.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/spacer_len5
+{
+  "system_id": "smu-gs5-published-flanks",
+  "input_spacers": 21,
+  "published_flank_records": 18,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/spacer_len5"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/spacer_scores.tsv --system-id smu-gs5-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/fusion_scores.tsv
+wrote 1024 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/smu-gs5-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sdy-ac2713-published-flanks/published_flanks.tsv --system-id sdy-ac2713-published-flanks --pam-side downstream --pam-length 5 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/candidate_pams_len5.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/spacer_len5
+{
+  "system_id": "sdy-ac2713-published-flanks",
+  "input_spacers": 19,
+  "published_flank_records": 18,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/spacer_len5"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/spacer_scores.tsv --system-id sdy-ac2713-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/fusion_scores.tsv
+wrote 1024 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sdy-ac2713-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/sag2-nem316-published-flanks/published_flanks.tsv --system-id sag2-nem316-published-flanks --pam-side downstream --pam-length 5 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/candidate_pams_len5.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/spacer_len5
+{
+  "system_id": "sag2-nem316-published-flanks",
+  "input_spacers": 12,
+  "published_flank_records": 9,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/spacer_len5"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/spacer_scores.tsv --system-id sag2-nem316-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/fusion_scores.tsv
+wrote 1024 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/sag2-nem316-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/ece-nctc12421-published-flanks/published_flanks.tsv --system-id ece-nctc12421-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/spacer_len7
+{
+  "system_id": "ece-nctc12421-published-flanks",
+  "input_spacers": 50,
+  "published_flank_records": 33,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/spacer_scores.tsv --system-id ece-nctc12421-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/ece-nctc12421-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/tsp-h121-published-flanks/published_flanks.tsv --system-id tsp-h121-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/spacer_len7
+{
+  "system_id": "tsp-h121-published-flanks",
+  "input_spacers": 19,
+  "published_flank_records": 14,
+  "incomplete_required_flank_records": 1,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/spacer_scores.tsv --system-id tsp-h121-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/tsp-h121-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/nme2-de10444-published-flanks/published_flanks.tsv --system-id nme2-de10444-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/spacer_len7
+{
+  "system_id": "nme2-de10444-published-flanks",
+  "input_spacers": 20,
+  "published_flank_records": 14,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": true,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/spacer_scores.tsv --system-id nme2-de10444-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/nme2-de10444-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/seq2-nctc11606-published-flanks/published_flanks.tsv --system-id seq2-nctc11606-published-flanks --pam-side downstream --pam-length 3 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/candidate_pams_len3.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/spacer_len3
+{
+  "system_id": "seq2-nctc11606-published-flanks",
+  "input_spacers": 16,
+  "published_flank_records": 14,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/spacer_len3"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/spacer_scores.tsv --system-id seq2-nctc11606-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/fusion_scores.tsv
+wrote 64 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/seq2-nctc11606-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/psp-ct06-published-flanks/published_flanks.tsv --system-id psp-ct06-published-flanks --pam-side downstream --pam-length 6 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/candidate_pams_len6.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/spacer_len6
+{
+  "system_id": "psp-ct06-published-flanks",
+  "input_spacers": 13,
+  "published_flank_records": 12,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/spacer_len6"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/spacer_scores.tsv --system-id psp-ct06-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/fusion_scores.tsv
+wrote 4096 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/psp-ct06-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_published_flanks.py --spacers <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/spacers.fna --published-flanks <PACKAGE_ROOT>/benchmarks/multi_evidence_v2/systems/wvi-dsm16922-published-flanks/published_flanks.tsv --system-id wvi-dsm16922-published-flanks --pam-side downstream --pam-length 7 --min-effective-spacers 5 --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/candidate_pams_len7.txt --outdir <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/spacer_len7
+{
+  "system_id": "wvi-dsm16922-published-flanks",
+  "input_spacers": 20,
+  "published_flank_records": 8,
+  "incomplete_required_flank_records": 0,
+  "evidence_eligible": true,
+  "orientation_warning": false,
+  "outdir": "<PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/spacer_len7"
+}
+RUN <PYTHON> scripts/fuse_pam_evidence.py --protein-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/protein_scores.tsv --spacer-scores <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/spacer_scores.tsv --system-id wvi-dsm16922-published-flanks --policy abstain --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/fusion_scores.tsv
+wrote 16384 rows -> <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/wvi-dsm16922-published-flanks/fusion_scores.tsv
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj4-campylobacter-jejuni-414-protein-only/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj4-campylobacter-jejuni-414-protein-only/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj4-campylobacter-jejuni-414-protein-only/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cj4-campylobacter-jejuni-414-protein-only/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/asp-acidiphilium-21-60-14-protein-only/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/asp-acidiphilium-21-60-14-protein-only/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/asp-acidiphilium-21-60-14-protein-only/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/asp-acidiphilium-21-60-14-protein-only/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+RUN <PYTHON> scripts/score_candidate_pams.py --protein <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cba-caulobacterales-protein-only/protein.fasta --candidates-file <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cba-caulobacterales-protein-only/candidate_pams.txt --model cas9_full --device cpu --out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cba-caulobacterales-protein-only/protein_scores.tsv --json-out <PACKAGE_ROOT>/data/parsed/verification_repro21_20261004/cba-caulobacterales-protein-only/protein_scores.json
+loading model weights from <MODEL_CACHE>/hub/models--Profluent-Bio--protein2pam-cas9_full/snapshots/407f7fc32146a4c0db13c05284f9f3a7cf0ff612 (local_files_only=True) ...
+model loaded onto cpu
+inference device=cpu bf16=False proteins=1
+warning: training FASTA not found; skipping neighbors: <PACKAGE_ROOT>/data/raw/cas9_full.fasta
+{
+  "decision": "FRAMEWORK_VALIDATED_NO_STRICT_COHORT",
+  "systems": 21,
+  "strict_independent_systems": 3,
+  "report": "data/parsed/verification_repro21_20261004/benchmark_report.json"
+}
+
+Exit code: 0
+Elapsed seconds: 262.434

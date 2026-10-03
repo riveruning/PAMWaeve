@@ -183,6 +183,22 @@ python3 scripts/build_competition_results.py \
 bash run_all.sh
 ```
 
+入口由 `scripts/run_submission.py` 保存执行记录。每次运行在
+`logs/runs/<UTC时间>/` 生成三个阶段的实际 stdout/stderr 日志及 `run.json`，
+记录参数、设备、Python/依赖版本、耗时、退出码、源码与产物哈希。
+Bootstrap 使用底层分析函数的实际默认种子 17，重复 2000 次；
+子进程设置 `PYTHONHASHSEED=17`。不据此声称设置了新的模型训练或推理种子。
+
+完整重跑并使用独立输出目录：
+
+```bash
+bash run_all.sh --fresh --outdir data/parsed/fresh_repro21
+```
+
+可通过 `--logdir logs/runs/my_run` 指定一个尚不存在的日志目录。
+本次随包的实际本地验证日志见 `logs/verification_20261004/`；
+数据入口说明见 `data/README.md`。
+
 `run_all.sh` 默认使用 `manifest_redistributable21.json`；
 仅当检测到 PAMpredict SpCas9 输入确实存在时，才切换到完整 22 系统清单。
 
@@ -328,6 +344,8 @@ PY
 ├── README.md                     # 本文件
 ├── requirements.txt              # 固定版本依赖
 ├── run_all.sh                    # 一键复跑
+├── data/README.md                # 数据位置、获取与许可说明
+├── notebooks/                    # 已执行的流程展示及可选内核依赖
 ├── src/pamdict/                  # 核心源代码
 │   ├── score/                    #   候选兼容度、spacer 证据、透明后融合
 │   ├── benchmark/                #   系统级评价、指标、契约审计
@@ -352,7 +370,9 @@ PY
 │   ├── CASE_SELECTION.md         # 案例选择
 │   ├── THIRD_PARTY.md            # 数据与第三方来源、许可
 │   └── SUBMISSION.md             # 提交包说明与验证记录
-└── logs/                         # 运行日志
+└── logs/                         # 真实运行记录、参数与种子
+    ├── README.md
+    └── verification_20261004/    # 本地验证记录；非独立新机验收
 ```
 
 ---

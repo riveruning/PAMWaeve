@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-10-03T16:47:35.072406+00:00",
+  "finished_utc": "2026-10-03T16:47:59.126863+00:00",
+  "seconds": 24.054,
+  "execution": "actual Jupyter kernel via nbclient",
+  "python": "3.10.20",
+  "code_cells": 4,
+  "passed": true,
+  "model_outputs": "cached from this delivery fresh 21-system run",
+  "analysis_outdir": "data/parsed/verification_repro21_20261004"
+}
